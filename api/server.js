@@ -43,9 +43,14 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.get("/", (req, res) => {
-  res.send("API is running");
+app.use((req, res) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
 });
+
+// app.get("/", (req, res) => {
+//   res.send("API is running");
+// });
 
 app.post("/card-wallet", async (req, res) => {
   try {
