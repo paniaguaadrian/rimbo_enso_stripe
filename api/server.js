@@ -4,6 +4,7 @@
 
 // Server Components
 import path from "path";
+import { fileURLToPath } from "url";
 import express from "express";
 import dotenv from "dotenv";
 import colors from "colors";
@@ -11,6 +12,10 @@ import morgan from "morgan";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import Stripe from "stripe";
 import cors from "cors";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Nodemailer
 import nodemailer from "nodemailer";
 
@@ -32,6 +37,7 @@ const stripe = new Stripe(process.env.SECRET_KEY);
 
 app.use(express.static("."));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -162,7 +168,7 @@ app.post("/card-wallet", async (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT;
 
 app.listen(
   PORT,

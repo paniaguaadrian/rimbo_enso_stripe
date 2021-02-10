@@ -4,11 +4,12 @@
   "description": "The new way of renting",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "12.x.x"
+  },
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "Adrián Paniagua - Rimbo Full Stack Developer",
