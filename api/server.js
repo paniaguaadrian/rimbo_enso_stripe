@@ -1,3 +1,7 @@
+// TODO 1.- Prepare StripeApp to deploy to GCP
+// TODO 2.- Deploy to GCP App Engine
+// TODO 3.- Change hostname to rimbo.rent/{url}
+
 // Server Components
 import path from "path";
 import express from "express";
@@ -62,8 +66,6 @@ app.post("/card-wallet", async (req, res) => {
         card: { request_three_d_secure: "any" },
       },
     });
-
-    // app.get("http://localhost:8080/api/stripe-tenants", { _id, createdAt });
 
     // Nodemailer
     const tenantEmail = {
