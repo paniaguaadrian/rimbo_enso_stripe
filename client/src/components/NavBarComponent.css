@@ -1,0 +1,29 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.navbar-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.enso-image {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.enso-logo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.enso-logo-text {
+  margin-bottom: -0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
