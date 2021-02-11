@@ -52,19 +52,21 @@ const CardSetupForm = () => {
     const tenantsPhone = document.getElementById("phone").value;
     const isAccepted = document.getElementById("terms").checked;
     const cardElement = elements.getElement("card");
-    const api = process.env.REACT_APP_BASE_URL;
+    const api_rimbo = process.env.REACT_APP_API_RIMBO;
+    const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
 
     setProcessingTo(true);
 
     try {
-      const { data: client_secret } = await axios.post(
-        "http://localhost:7000/card-wallet",
-        {
-          tenantsName,
-          tenantsEmail,
-          tenantsPhone,
-        }
+      const { data: client_secret } = await axios.post(`${api_stripe_enso}`, {
+        tenantsName,
+        tenantsEmail,
+        tenantsPhone,
+      });
+      console.log(
+        "This is client_secret after post/, before confirmCard" + client_secret
       );
+      console.log(client_secret);
 
       const { error } = await stripe.confirmCardSetup(client_secret, {
         payment_method: {
@@ -76,7 +78,10 @@ const CardSetupForm = () => {
           },
         },
       });
-
+      console.log("This is 'error' on confirm card setup");
+      console.log(error);
+      console.log("This is client_secret after confirm card");
+      console.log(client_secret);
       if (error) {
         setCheckoutError("* Rellena todos los campos del formulario.");
         setProcessingTo(false);
@@ -84,7 +89,7 @@ const CardSetupForm = () => {
       } else {
         setIsSuccessfullySubmitted(true);
 
-        await axios.post(`${api}`, {
+        await axios.post(`${api_rimbo}`, {
           tenantsName: tenantsName,
           tenantsEmail: tenantsEmail,
           tenantsPhone: tenantsPhone,

@@ -1,9 +1,6 @@
-// TODO 1.- Prepare StripeApp to deploy to GCP
-// TODO 2.- Deploy to GCP App Engine
-// TODO 3.- Change hostname to rimbo.rent/{url}
-
 // Server Components
 import path from "path";
+import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
 import express from "express";
 import dotenv from "dotenv";
@@ -13,14 +10,16 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import Stripe from "stripe";
 import cors from "cors";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Nodemailer
 import nodemailer from "nodemailer";
 
 dotenv.config();
 const app = express();
+
+app.set("trust proxy", true);
 
 // Cors
 app.use(cors());
@@ -37,22 +36,28 @@ const stripe = new Stripe(process.env.SECRET_KEY);
 
 app.use(express.static("."));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(express.static(path.join(__dirname, "public")));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.use((req, res) => {
-  // If no routes match, send them the React HTML.
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-// app.get("/", (req, res) => {
-//   res.send("API is running");
+// app.use((req, res) => {
+// If no routes match, send them the React HTML.
+//   res.sendFile(__dirname + "/public/index.html");
 // });
 
-app.post("/card-wallet", async (req, res) => {
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
+app.get("/stripe/card-wallet", (req, res) => {
+  res.send("Api is working...!");
+});
+
+app.post("/stripe/card-wallet", async (req, res) => {
   try {
     const { tenantsName, tenantsEmail, tenantsPhone } = req.body;
 
@@ -70,6 +75,7 @@ app.post("/card-wallet", async (req, res) => {
       name: tenantsName,
       email: tenantsEmail,
     });
+    console.log("this is customer" + customer);
 
     const intent = await stripe.setupIntents.create({
       customer: customer.id,
@@ -77,6 +83,9 @@ app.post("/card-wallet", async (req, res) => {
         card: { request_three_d_secure: "any" },
       },
     });
+    console.log("this is customer" + customer);
+    console.log(intent.client_secret);
+    console.log(intent);
 
     // Nodemailer
     const tenantEmail = {
@@ -164,7 +173,7 @@ app.post("/card-wallet", async (req, res) => {
       }
     });
 
-    res.status(200).send(intent.client_secret);
+    res.status(200).json(intent.client_secret);
   } catch (error) {
     res.status(500).json({ statusCode: 500, message: error.message });
   }
@@ -173,7 +182,7 @@ app.post("/card-wallet", async (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 app.listen(
   PORT,
