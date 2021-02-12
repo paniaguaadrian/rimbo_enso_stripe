@@ -17,11 +17,11 @@ const App = () => {
     <main className="App">
       <div>
         <NavbarComponent />
-        <div>
-          <Elements stripe={stripePromise}>
-            <CardSetupForm />
-          </Elements>
-        </div>
+      </div>
+      <div className="card-setup-form-container">
+        <Elements stripe={stripePromise}>
+          <CardSetupForm />
+        </Elements>
       </div>
     </main>
   );

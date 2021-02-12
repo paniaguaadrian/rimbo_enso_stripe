@@ -1,7 +1,5 @@
 // Server Components
 import path from "path";
-import bodyParser from "body-parser";
-import { fileURLToPath } from "url";
 import express from "express";
 import dotenv from "dotenv";
 import colors from "colors";
@@ -9,9 +7,6 @@ import morgan from "morgan";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import Stripe from "stripe";
 import cors from "cors";
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 
 // Nodemailer
 import nodemailer from "nodemailer";
@@ -36,18 +31,10 @@ const stripe = new Stripe(process.env.SECRET_KEY);
 
 app.use(express.static("."));
 app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-// app.use(express.static(path.join(__dirname, "public")));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-
-// app.use((req, res) => {
-// If no routes match, send them the React HTML.
-//   res.sendFile(__dirname + "/public/index.html");
-// });
 
 app.get("/", (req, res) => {
   res.send("API is running");
@@ -75,7 +62,6 @@ app.post("/stripe/card-wallet", async (req, res) => {
       name: tenantsName,
       email: tenantsEmail,
     });
-    console.log("this is customer" + customer);
 
     const intent = await stripe.setupIntents.create({
       customer: customer.id,
@@ -83,9 +69,6 @@ app.post("/stripe/card-wallet", async (req, res) => {
         card: { request_three_d_secure: "any" },
       },
     });
-    console.log("this is customer" + customer);
-    console.log(intent.client_secret);
-    console.log(intent);
 
     // Nodemailer
     const tenantEmail = {

@@ -63,10 +63,6 @@ const CardSetupForm = () => {
         tenantsEmail,
         tenantsPhone,
       });
-      console.log(
-        "This is client_secret after post/, before confirmCard" + client_secret
-      );
-      console.log(client_secret);
 
       const { error } = await stripe.confirmCardSetup(client_secret, {
         payment_method: {
@@ -78,10 +74,7 @@ const CardSetupForm = () => {
           },
         },
       });
-      console.log("This is 'error' on confirm card setup");
-      console.log(error);
-      console.log("This is client_secret after confirm card");
-      console.log(client_secret);
+
       if (error) {
         setCheckoutError("* Rellena todos los campos del formulario.");
         setProcessingTo(false);
@@ -134,7 +127,7 @@ const CardSetupForm = () => {
               </p>
               <div className="rimbo-sign">
                 <h4>Powered by</h4>
-                <img src={RimboLogo} alt="" />
+                <img src={RimboLogo} alt="Rimbo Rent Logo" />
               </div>
             </div>
             <div className="form-container">
@@ -238,7 +231,11 @@ const CardSetupForm = () => {
                 </button>
               </form>
               <div className="security-container">
-                <img className="stripe-logo" src={StripeLogo} alt="" />
+                <img
+                  className="stripe-logo"
+                  src={StripeLogo}
+                  alt="Stripe Security Payment Logo"
+                />
               </div>
             </div>
           </main>
@@ -257,12 +254,12 @@ const CardSetupForm = () => {
                 <p>Bienvenido a ...</p>
               </div>
               <div className="success-container-right">
-                <img src={EnsoImage} alt="" />
+                <img src={EnsoImage} alt="Enso co-living logo" />
               </div>
             </main>
             <div className="rimbo-sign-success">
               <h4>Powered by</h4>
-              <img src={RimboLogo} alt="" />
+              <img src={RimboLogo} alt="Rimbo Rent Logo" />
             </div>
           </>
         </div>

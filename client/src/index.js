@@ -1,11 +1,15 @@
+// React Components
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route } from "react-router-dom";
-
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+// Styles
+import "./index.css";
+
+// Custom Components
+import App from "./App";
 
 ReactDOM.render(
   <Router>

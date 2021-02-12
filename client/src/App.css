@@ -1,10 +1,26 @@
 .App {
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 813px) {
+  .App {
+    position: relative !important;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .App::before {
@@ -12,13 +28,20 @@
   background-image: url(../src/images/undraw_buy_house_560d.png);
   background-size: cover;
   background-repeat: no-repeat, repeat;
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.18;
+  opacity: 0.2;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 813px) {
+  .App::before {
+    display: none;
+  }
 }

@@ -10,7 +10,11 @@ const NavbarComponent = () => {
       <div>
         <div className="navbar-container">
           <div className="navbar-item">
-            <img className="enso-image" src={EnsoLogo} alt="" />
+            <img
+              className="enso-image"
+              src={EnsoLogo}
+              alt="Enso-coliving logo"
+            />
             <div className="enso-logo-text-container">
               <p className="enso-logo-text">enso</p>
               <p>co-living</p>
