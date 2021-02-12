@@ -46,16 +46,7 @@ app.get("/stripe/card-wallet", (req, res) => {
 
 app.post("/stripe/card-wallet", async (req, res) => {
   try {
-    const { tenantsName, tenantsEmail, tenantsPhone } = req.body;
-
-    // Nodemailer
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-      },
-    });
+    const { tenantsName, tenantsEmail } = req.body;
 
     // Stripe
     const customer = await stripe.customers.create({
@@ -70,27 +61,49 @@ app.post("/stripe/card-wallet", async (req, res) => {
       },
     });
 
-    // Nodemailer
-    const tenantEmail = {
-      from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
-      to: tenantsEmail, // tenant's email
-      subject: `¡Tarjeta registrada correctamente ${tenantsName} !`,
-      text: "",
-      html: `<div>
+    res.status(200).json(intent.client_secret);
+  } catch (error) {
+    res.status(500).json({ statusCode: 500, message: error.message });
+  }
+});
+
+app.get("/stripe/submit-email", (req, res) => {
+  res.send("Email send API..!");
+});
+
+app.post("/stripe/submit-email", (req, res) => {
+  const { tenantsName, tenantsEmail, tenantsPhone } = req.body;
+
+  // Nodemailer
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
+  });
+
+  // Nodemailer
+  const tenantEmail = {
+    from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
+    to: tenantsEmail, // tenant's email
+    subject: `¡Tarjeta registrada correctamente ${tenantsName} !`,
+    text: "",
+    html: `<div>
       <h3 style='color:#6aa3a1'>Buenas noticias ${tenantsName}</h3>
       <p>¡Tu tarjeta se ha registrado correctamente! Ya puedes continuar con la firma de tu contrato de alquiler.</p>
       <p>¡Estás a un solo paso de mudarte a tu nuevo piso! Contacta con tu agente inmobiliario/propietario para conocer los siguientes pasos.</p>
       <p>Atentamente,</p>
       <h4 style='color:#6aa3a1'>Rimbo Rent</h4>
       </div>`,
-    };
+  };
 
-    const rimboEmail = {
-      from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
-      to: tenantsEmail, // info@rimbo.rent
-      subject: `New tenant at Enso : ${tenantsEmail} | `,
-      text: ` ${tenantsName} Customer: id ${customer.id}`,
-      html: `<div>
+  const rimboEmail = {
+    from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
+    to: tenantsEmail, // info@rimbo.rent
+    subject: `New tenant at Enso : ${tenantsEmail} | `,
+    text: ` ${tenantsName}`,
+    html: `<div>
       <h2 style="color: #6aa3a1">New tenant from Enso confirm his/her payment options.</h2>
       <h3>Tenant's Information:</h3>
       <ul>
@@ -101,21 +114,17 @@ app.post("/stripe/card-wallet", async (req, res) => {
       Tenant's email : ${tenantsEmail}
       </li>
       <li>
-      Tenant's customerID (From Stripe) : ${customer.id}
-      </li>
-      <li>
       Tenant's phone : ${tenantsPhone}
       </li>
       </ul>
       </div>`,
-    };
-
-    const ensoEmail = {
-      from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
-      to: tenantsEmail, // enso...
-      subject: `New tenant at Enso : ${tenantsEmail} | `,
-      text: ` ${tenantsName} Customer: id ${customer.id}`,
-      html: `<div>
+  };
+  const ensoEmail = {
+    from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
+    to: tenantsEmail, // enso...
+    subject: `New tenant at Enso : ${tenantsEmail} | `,
+    text: ` ${tenantsName}`,
+    html: `<div>
       <h2 style="color: #6aa3a1">New tenant from Enso confirm his/her payment options with Rimbo Rent.</h2>
       <h3>Tenant's Information:</h3>
       <ul>
@@ -130,36 +139,34 @@ app.post("/stripe/card-wallet", async (req, res) => {
       </li>
       </ul>
       </div>`,
-    };
+  };
 
-    transporter.sendMail(tenantEmail, (err, data) => {
-      if (err) {
-        console.log("There is an error here...!");
-      } else {
-        console.log("Email sent!");
-      }
-    });
+  transporter.sendMail(tenantEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!");
+    } else {
+      console.log("Email sent!");
+    }
+  });
 
-    transporter.sendMail(rimboEmail, (err, data) => {
-      if (err) {
-        console.log("There is an error here...!");
-      } else {
-        console.log("Email sent!");
-      }
-    });
+  transporter.sendMail(rimboEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!");
+    } else {
+      console.log("Email sent!");
+    }
+  });
 
-    transporter.sendMail(ensoEmail, (err, data) => {
-      if (err) {
-        console.log("There is an error here...!");
-      } else {
-        console.log("Email sent!");
-      }
-    });
-
-    res.status(200).json(intent.client_secret);
-  } catch (error) {
-    res.status(500).json({ statusCode: 500, message: error.message });
-  }
+  transporter.sendMail(ensoEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!");
+      console.log("This is data on error " + data);
+    } else {
+      console.log("Email sent!");
+      console.log("This is data on success ");
+      console.log(data);
+    }
+  });
 });
 
 app.use(notFound);

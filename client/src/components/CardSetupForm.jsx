@@ -54,6 +54,7 @@ const CardSetupForm = () => {
     const cardElement = elements.getElement("card");
     const api_rimbo = process.env.REACT_APP_API_RIMBO;
     const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
+    const api_stripe_enso_email = process.env.REACT_APP_API_STRIPE_ENSO_EMAIL;
 
     setProcessingTo(true);
 
@@ -87,6 +88,12 @@ const CardSetupForm = () => {
           tenantsEmail: tenantsEmail,
           tenantsPhone: tenantsPhone,
           isAccepted: isAccepted,
+        });
+
+        await axios.post(`${api_stripe_enso_email}`, {
+          tenantsName,
+          tenantsEmail,
+          tenantsPhone,
         });
       }
     } catch (err) {
