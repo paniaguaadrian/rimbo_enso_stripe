@@ -51,6 +51,10 @@ const CardSetupForm = () => {
     const tenantsName = document.getElementById("name").value;
     const tenantsPhone = document.getElementById("phone").value;
     const isAccepted = document.getElementById("terms").checked;
+    const timestamps = new Date()
+      .toISOString()
+      .replace(/T/, " ")
+      .replace(/\..+/, "");
     const cardElement = elements.getElement("card");
     const api_rimbo = process.env.REACT_APP_API_RIMBO;
     const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
@@ -94,6 +98,7 @@ const CardSetupForm = () => {
           tenantsName,
           tenantsEmail,
           tenantsPhone,
+          timestamps,
         });
       }
     } catch (err) {
