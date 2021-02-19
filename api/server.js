@@ -91,9 +91,9 @@ app.post("/stripe/submit-email", (req, res) => {
     text: "",
     html: `<div>
       <h3 style='color:#6aa3a1'>Hi ${tenantsName},</h3>
-      <p>Greetings from Rimbo and thank you for registering with us!</p>
-      <p>Important: Please, read the attached ‘Tenant’s guide to Rimbo’: How to make the most out of Rimbo.</p>
-      <p>Enso coliving joined forces with Rimbo to help you move you into your new home quick and easy - and deposit-free!</p>
+      <p>Greetings from Rimbo and thank you for registering with Enso!</p>
+      <p><b>Important:</b> Please, read the attached ‘Tenant’s guide to Rimbo’: How to make the most out of Rimbo.</p>
+      <p><b>Enso coliving</b> joined forces with Rimbo to help you move you into your new home quick and easy - and deposit-free!</p>
       <p>With Rimbo, you ‘check in’ without paying cash deposit, and pay for any damages or unpaid rent only when you check out.</p>
       <p>It sounds great, doesn't it?<br/>
       Well - it’s true and you’re now part of the enso-Rimbo family!</p>
@@ -102,6 +102,12 @@ app.post("/stripe/submit-email", (req, res) => {
       <p>Warm regards,</p>
 
       <h4 style='color:#6aa3a1'>Rimbo Rent</h4>
+      
+      <h4>Phone & WhatsApp: +34 623 063 769<br/>
+      E-Mail: info@rimbo.com<br/>
+      E-Mail:>Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
+      </h4>
+
       </div>`,
   };
 
@@ -164,6 +170,13 @@ app.post("/stripe/submit-email", (req, res) => {
       </ul>
       <p>We’re excited to have ${tenantsName} join the enso/Rimbo family!</p>
       <p>If you need any further information or support from our side - please, let us know!</p>
+
+      <h4 style='color:#6aa3a1'>Client Management</h4>
+      
+      <h4>Phone & WhatsApp: +34 623 063 769<br/>
+      E-Mail: info@rimbo.com<br/>
+      E-Mail:>Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
+      </h4>
       </div>`,
   };
 
@@ -186,11 +199,8 @@ app.post("/stripe/submit-email", (req, res) => {
   transporter.sendMail(ensoEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!");
-      console.log("This is data on error " + data);
     } else {
       console.log("Email sent!");
-      console.log("This is data on success ");
-      console.log(data);
     }
   });
 });

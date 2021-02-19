@@ -16,7 +16,7 @@
 
 @media only screen and (max-width: 768px) {
   .hero-section-container h1 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 200;
     margin-top: 1rem;
     padding: 0 3rem;
@@ -107,7 +107,7 @@
 
 @media only screen and (max-width: 768px) {
   .form-full-container-success {
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -129,13 +129,12 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row !important;
     justify-content: center;
     align-items: center;
     /* text-align: center; */
-    width: 70rem;
-    height: 30rem;
-    flex-wrap: wrap;
+    width: 58rem;
+    height: 24rem;
     position: relative;
     background-color: rgba(255, 255, 255, 0.8) !important;
     border-radius: 4px;
@@ -184,6 +183,37 @@
   }
 }
 
+.form-header-left > .important_p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  margin-bottom: 1.4rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-header-left > .important_p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-header-left > .important_p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
 .form-header-left p {
   font-size: 0.9rem;
   font-weight: 200;
@@ -223,11 +253,45 @@
   padding: 1rem 1rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .form-header-left-success {
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    justify-content: left;
+    width: 35rem;
+    padding: 1rem 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .form-header-left-success p {
   font-size: 0.8rem;
   font-weight: 200;
   line-height: 1.4rem;
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-header-left-success p {
+    font-size: 1.8rem;
+    font-weight: 250;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-header-left-success p {
+    font-size: 1.3rem;
+    font-weight: 250;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 .success-container-right {
