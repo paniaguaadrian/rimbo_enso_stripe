@@ -1,0 +1,106 @@
+.rimbo-logo-terms {
+  width: 8rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .terms-conditions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem;
+    padding: 2rem 7rem !important;
+  }
+}
+
+.terms-conditions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1rem;
+  padding: 2rem 1rem;
+}
+
+.terms-conditions-container h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  /* padding: 0 3rem; */
+  text-decoration: underline;
+}
+
+.terms-conditions-container h2 {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  /* padding: 0 3rem; */
+}
+
+.terms-conditions-container h3 {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  /* padding: 0 3rem; */
+}
+
+.terms-conditions-container h3 > span {
+  text-decoration: underline;
+}
+
+.terms-conditions-container p {
+  font-weight: 200;
+  line-height: 1.7rem;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  /* padding: 0 3rem; */
+}
+
+.terms-conditions-container a {
+  font-weight: 200;
+  color: #6aa3a1;
+}
+
+@media only screen and (min-width: 1200px) {
+  .list-lower-alpha {
+    list-style-type: lower-alpha;
+    font-weight: 200;
+    line-height: 1.7rem;
+    text-align: justify;
+    /* padding: 0 3rem; */
+    margin-left: 5rem !important;
+  }
+}
+
+.list-lower-alpha {
+  list-style-type: lower-alpha;
+  font-weight: 200;
+  line-height: 1.7rem;
+  text-align: justify;
+  /* padding: 0 3rem; */
+  margin-left: 2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .list-lower-roman {
+    list-style-type: lower-roman;
+    font-weight: 200;
+    line-height: 1.7rem;
+    text-align: justify;
+    /* padding: 0 3rem; */
+    margin-left: 5rem !important;
+  }
+}
+
+.list-lower-roman {
+  list-style-type: lower-roman;
+  font-weight: 200;
+  line-height: 1.7rem;
+  text-align: justify;
+  /* padding: 0 3rem; */
+  margin-left: 2rem;
+}
+
+.terms-conditions-container li {
+  margin-bottom: 1rem;
+}

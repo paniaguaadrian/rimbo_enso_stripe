@@ -202,7 +202,7 @@ const CardSetupForm = () => {
                   <p className="checkbox_text">
                     Enviando tus datos aceptas las{" "}
                     <a
-                      href="https://rimbo.rent/terminos-y-condiciones/"
+                      href="/enso-coliving/terms-and-conditions"
                       target="_blank"
                       rel="noreferrer"
                       className="link-tag"
