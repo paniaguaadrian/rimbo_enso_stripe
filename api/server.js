@@ -203,6 +203,8 @@ app.post("/stripe/submit-email", (req, res) => {
       console.log("Email sent!");
     }
   });
+
+  res.status(200).json();
 });
 
 app.use(notFound);

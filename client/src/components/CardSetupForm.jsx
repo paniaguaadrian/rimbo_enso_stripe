@@ -52,14 +52,15 @@ const CardSetupForm = () => {
     const tenantsName = document.getElementById("name").value;
     const tenantsPhone = document.getElementById("phone").value;
     const isAccepted = document.getElementById("terms").checked;
+    const propertyManagerName = "Enso Coliving";
     const timestamps = new Date()
       .toISOString()
       .replace(/T/, " ")
       .replace(/\..+/, "");
     const cardElement = elements.getElement("card");
-    const api_rimbo_enso_tenant = process.env.REACT_APP_API_RIMBO_ENSO_TENANT;
-    const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
-    const api_stripe_enso_email = process.env.REACT_APP_API_STRIPE_ENSO_EMAIL;
+    // const api_rimbo_enso_tenant = process.env.REACT_APP_API_RIMBO_ENSO_TENANT;
+    // const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
+    // const api_stripe_enso_email = process.env.REACT_APP_API_STRIPE_ENSO_EMAIL;
 
     setProcessingTo(true);
 
@@ -75,11 +76,14 @@ const CardSetupForm = () => {
     // `${api_rimbo_enso_tenant}` (P)
 
     try {
-      const { data: client_secret } = await axios.post(`${api_stripe_enso}`, {
-        tenantsName,
-        tenantsEmail,
-        tenantsPhone,
-      });
+      const { data: client_secret } = await axios.post(
+        "http://localhost:8080/stripe/card-wallet",
+        {
+          tenantsName,
+          tenantsEmail,
+          tenantsPhone,
+        }
+      );
 
       const { error } = await stripe.confirmCardSetup(client_secret, {
         payment_method: {
@@ -99,14 +103,15 @@ const CardSetupForm = () => {
       } else {
         setIsSuccessfullySubmitted(true);
 
-        await axios.post(`${api_rimbo_enso_tenant}`, {
+        await axios.post("http://localhost:8081/api/enso/tenants", {
           tenantsName: tenantsName,
           tenantsEmail: tenantsEmail,
           tenantsPhone: tenantsPhone,
           isAccepted: isAccepted,
+          propertyManagerName: propertyManagerName,
         });
 
-        await axios.post(`${api_stripe_enso_email}`, {
+        await axios.post("http://localhost:8080/stripe/submit-email", {
           tenantsName,
           tenantsEmail,
           tenantsPhone,
