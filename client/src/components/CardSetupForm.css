@@ -1,3 +1,18 @@
+.toggle-button-container {
+  text-align: right !important;
+}
+
+.toggle-language-button {
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  background-color: transparent !important;
+}
+
+.language-logo {
+  width: 2rem;
+}
+
 /* General Container + Header */
 .hero-section-container {
   margin: 0 auto;
@@ -16,7 +31,7 @@
 
 @media only screen and (max-width: 768px) {
   .hero-section-container h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 200;
     margin-top: 1rem;
     padding: 0 3rem;
@@ -692,6 +707,11 @@ input[type="text"]:focus {
   outline: none;
   box-shadow: none;
 }
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 input[type="number"]:focus {
   outline: none;
   box-shadow: none;

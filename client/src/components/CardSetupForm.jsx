@@ -1,5 +1,5 @@
 // React Components
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 
@@ -10,6 +10,8 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import EnsoImage from "../images/enso-coliving-success.jpg";
 import StripeLogo from "../images/secure-payments.png";
 import RimboLogo from "../images/rimbo-logo.png";
+import SpanishLogo from "../images/spanish-language.png";
+import EnglishLogo from "../images/english-language.png";
 
 // Styles
 import "./CardSection.css";
@@ -34,6 +36,25 @@ const CARD_ELEMENT_OPTIONS = {
 };
 
 const CardSetupForm = () => {
+  // ! Text test
+  const [language, setLanguage] = useState("english");
+  const [text, setText] = useState({});
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => {
+      if (prev === "english") return "spanish";
+      return "english";
+    });
+  };
+
+  useEffect(() => {
+    fetch(`/${language}.json`)
+      .then((res) => res.json())
+      .then((data) => setText(data))
+      .catch((err) => console.error(err.message));
+  }, [language]);
+
+  /////////////////////////
   const [isProcessing, setProcessingTo] = useState(false);
   const [checkoutError, setCheckoutError] = useState();
 
@@ -128,27 +149,42 @@ const CardSetupForm = () => {
       {!isSuccessfullySubmitted ? (
         <>
           <div className="hero-section-container">
+            <div className="toggle-button-container">
+              {language === "english" ? (
+                <button
+                  onClick={toggleLanguage}
+                  className="toggle-language-button"
+                >
+                  <img
+                    src={SpanishLogo}
+                    alt="Spanish language logo"
+                    className="language-logo"
+                  />
+                </button>
+              ) : (
+                <button
+                  onClick={toggleLanguage}
+                  className="toggle-language-button"
+                >
+                  <img
+                    src={EnglishLogo}
+                    alt="English language logo"
+                    className="language-logo"
+                  />
+                </button>
+              )}
+            </div>
+
             <h1>
-              ¡Alquila esta habitación{" "}
-              <span className="underline-text">sin pagar fianza</span>!
+              {text.titlePartOne}{" "}
+              <span className="underline-text">{text.titlePartTwo}</span>!
             </h1>
           </div>
           <main className="form-full-container">
             <div className="form-header-left">
-              <p>
-                Desde Enso estamos muy contentos de que quieras formar parte de
-                esta gran familia, y como buena familia, nos gusta cuidar de los
-                nuestros.
-              </p>
-              <p className="important_p">
-                Alquiler sin fianza, para que te gastes el dinero en lo que tú
-                quieras.
-              </p>
-              <p>
-                Con Enso puedes mudarte de manera rápida, fácil y asequible.
-                Solo tendrás que rellenar este pequeño formulario con tus
-                datos... Y LISTO
-              </p>
+              <p>{text.informationOne}</p>
+              <p className="important_p">{text.informationTwo}</p>
+              <p>{text.informationThree}</p>
               <div className="rimbo-sign">
                 <h4>Powered by</h4>
                 <img src={RimboLogo} alt="Rimbo Rent Logo" />
@@ -157,7 +193,7 @@ const CardSetupForm = () => {
             <div className="form-container">
               <form onSubmit={handleFormSubmit}>
                 <div className="form-element">
-                  <label htmlFor="name">Nombre completo</label>
+                  <label htmlFor="name">{text.nameLabel}</label>
                   <input
                     type="text"
                     id="name"
@@ -177,18 +213,18 @@ const CardSetupForm = () => {
                   />
                 </div>
                 <div className="form-element">
-                  <label htmlFor="phone">Teléfono</label>
+                  <label htmlFor="phone">{text.telLabel}</label>
                   <input
                     type="text"
                     id="phone"
                     name="phone"
                     required
-                    placeholder="Tu número de contacto"
+                    placeholder={text.telPlaceholder}
                   />
                 </div>
                 <div className="form-element">
                   <label className="stripe-label">
-                    <h4 className="card-header">Detalles tarjeta</h4>
+                    <h4 className="card-header">{text.cardTitle}</h4>
                     <CardElement
                       options={CARD_ELEMENT_OPTIONS}
                       onChange={handleCardDetailsChange}
@@ -196,16 +232,13 @@ const CardSetupForm = () => {
                   </label>
                 </div>
                 <div className="advice-security-container">
-                  <p className="advice-security-text">
-                    * Solo preautorización, limitada por importe hasta 1 mes de
-                    alquiler
-                  </p>
+                  <p className="advice-security-text">{text.adviceText}</p>
                   <p></p>
                 </div>
                 <div className="terms-container">
                   <input type="checkbox" id="terms" required />
                   <p className="checkbox_text">
-                    Enviando tus datos aceptas las{" "}
+                    {text.terms1}{" "}
                     <a
                       href="/enso-coliving/terms-and-conditions"
                       target="_blank"
@@ -213,7 +246,7 @@ const CardSetupForm = () => {
                       className="link-tag"
                     >
                       {" "}
-                      Condiciones Generales
+                      {text.terms2}
                     </a>
                     ,{" "}
                     <a
@@ -223,7 +256,7 @@ const CardSetupForm = () => {
                       className="link-tag"
                     >
                       {" "}
-                      Política de Privacidad
+                      {text.terms3}
                     </a>
                     ,{" "}
                     <a
@@ -233,9 +266,9 @@ const CardSetupForm = () => {
                       className="link-tag"
                     >
                       {" "}
-                      Política de Cookies{" "}
+                      {text.terms4}{" "}
                     </a>{" "}
-                    de Rimbo Rent.
+                    {text.terms5}.
                   </p>
                 </div>
                 <div className="error-container">
@@ -255,7 +288,7 @@ const CardSetupForm = () => {
                     disabled={isProcessing || !stripe}
                     className="btn-submit-stripe"
                   >
-                    Enviar mis datos
+                    {text.sendButton}
                   </button>
                 )}
               </form>
@@ -273,16 +306,13 @@ const CardSetupForm = () => {
         <div className="success">
           <>
             <div className="hero-section-container">
-              <h1>¡Ya eres parte de Enso!</h1>
+              <h1>{text.successOne}</h1>
             </div>
             <main className="form-full-container-success">
               <div className="form-header-left-success">
-                <p>En unos momentos Guille te enviará el contrato.</p>
-                <p>
-                  Si tienes alguna duda, el equipo de Enso está disponible para
-                  ti.
-                </p>
-                <p>Ahora toca disfrutar de la mejor experiencia de tu vida.</p>
+                <p>{text.successTwo}</p>
+                <p>{text.successThree}</p>
+                <p>{text.successFour}</p>
               </div>
               <div className="success-container-right">
                 <img src={EnsoImage} alt="Enso co-living logo" />
