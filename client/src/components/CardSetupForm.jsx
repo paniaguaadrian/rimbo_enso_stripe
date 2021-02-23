@@ -36,7 +36,6 @@ const CARD_ELEMENT_OPTIONS = {
 };
 
 const CardSetupForm = () => {
-  // ! Text test
   const [language, setLanguage] = useState("english");
   const [text, setText] = useState({});
 
@@ -54,7 +53,6 @@ const CardSetupForm = () => {
       .catch((err) => console.error(err.message));
   }, [language]);
 
-  /////////////////////////
   const [isProcessing, setProcessingTo] = useState(false);
   const [checkoutError, setCheckoutError] = useState();
 
@@ -225,6 +223,7 @@ const CardSetupForm = () => {
                 <div className="form-element">
                   <label className="stripe-label">
                     <h4 className="card-header">{text.cardTitle}</h4>
+                    <p className="card-subtitle">{text.cardSubtitle}</p>
                     <CardElement
                       options={CARD_ELEMENT_OPTIONS}
                       onChange={handleCardDetailsChange}
@@ -265,10 +264,9 @@ const CardSetupForm = () => {
                       rel="noreferrer"
                       className="link-tag"
                     >
-                      {" "}
-                      {text.terms4}{" "}
+                      {text.terms4}
                     </a>{" "}
-                    {text.terms5}.
+                    {text.terms5}
                   </p>
                 </div>
                 <div className="error-container">

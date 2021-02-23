@@ -2,11 +2,19 @@
   text-align: right !important;
 }
 
+.card-subtitle {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 400;
+  width: 20rem;
+}
+
 .toggle-language-button {
   width: 5rem;
   height: 2rem;
   border: none;
   background-color: transparent !important;
+  cursor: pointer;
 }
 
 .language-logo {
@@ -96,8 +104,8 @@
     justify-content: space-between;
     align-items: center;
     /* text-align: center; */
-    width: 70rem;
-    height: 40rem;
+    width: 72rem;
+    height: 45rem;
     flex-wrap: wrap;
     position: relative;
     background-color: rgba(255, 255, 255, 0.8) !important;
@@ -373,7 +381,7 @@
     background-color: white;
     border-radius: 4px;
     width: 30rem;
-    height: 38rem;
+    height: 42rem;
     padding: 1.5rem 0;
     /* position: relative; */
   }

@@ -10,6 +10,8 @@ import cors from "cors";
 
 // Nodemailer
 import nodemailer from "nodemailer";
+import sgTransport from "nodemailer-sendgrid-transport";
+import hbs from "nodemailer-express-handlebars";
 
 dotenv.config();
 const app = express();
@@ -74,45 +76,43 @@ app.get("/stripe/submit-email", (req, res) => {
 app.post("/stripe/submit-email", (req, res) => {
   const { tenantsName, tenantsEmail, tenantsPhone, timestamps } = req.body;
 
-  // Nodemailer
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+  const transporter = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
+  let options = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "index",
     },
-  });
+    viewPath: "views/",
+  };
+
+  transporter.use("compile", hbs(options));
 
   // Nodemailer
   const tenantEmail = {
-    from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
+    from: "Enso | Rimbo info@rimbo.rent",
     to: tenantsEmail, // tenant's email
     subject: "Enso&Rimbo - Successful Registration!",
     text: "",
-    html: `<div>
-      <h3 style='color:#6aa3a1'>Hi ${tenantsName},</h3>
-      <p>Greetings from Rimbo and thank you for registering with Enso!</p>
-      <p><b>Important:</b> Please, read the attached ‘Tenant’s guide to Rimbo’: How to make the most out of Rimbo.</p>
-      <p><b>Enso coliving</b> joined forces with Rimbo to help you move you into your new home quick and easy - and deposit-free!</p>
-      <p>With Rimbo, you ‘check in’ without paying cash deposit, and pay for any damages or unpaid rent only when you check out.</p>
-      <p>It sounds great, doesn't it?<br/>
-      Well - it’s true and you’re now part of the enso-Rimbo family!</p>
-      <p>Enso’s team will be in touch with you with the following steps.</p>
-      <p>Good luck with your move and enjoy your new home!</p>
-      <p>Warm regards,</p>
-
-      <h4 style='color:#6aa3a1'>Rimbo Rent</h4>
-      
-      <h4>Phone & WhatsApp: +34 623 063 769<br/>
-      E-Mail: info@rimbo.com<br/>
-      E-Mail:>Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
-      </h4>
-
-      </div>`,
+    attachments: [
+      {
+        filename: "rimbo-logo.png",
+        path: "./views/images/rimbo-logo.png",
+        cid: "rimbologo",
+      },
+    ],
+    template: "index",
   };
 
   const rimboEmail = {
-    from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
+    from: "Enso | Rimbo info@rimbo.rent",
     to: tenantsEmail, // info@rimbo.rent
     subject: "Enso Coliving - Tenancy ID - New Tenant Confirmation",
     text: "",
@@ -138,7 +138,7 @@ app.post("/stripe/submit-email", (req, res) => {
       </div>`,
   };
   const ensoEmail = {
-    from: "Rimbo Rent | Enso co-living <process.env.EMAIL>",
+    from: "Enso | Rimbo info@rimbo.rent",
     to: tenantsEmail, // enso...
     subject: `New tenant at Enso : ${tenantsEmail} | `,
     text: ` ${tenantsName}`,
@@ -182,7 +182,7 @@ app.post("/stripe/submit-email", (req, res) => {
 
   transporter.sendMail(tenantEmail, (err, data) => {
     if (err) {
-      console.log("There is an error here...!");
+      console.log("There is an error here...!" + err);
     } else {
       console.log("Email sent!");
     }
@@ -190,7 +190,7 @@ app.post("/stripe/submit-email", (req, res) => {
 
   transporter.sendMail(rimboEmail, (err, data) => {
     if (err) {
-      console.log("There is an error here...!");
+      console.log("There is an error here...!" + err);
     } else {
       console.log("Email sent!");
     }
@@ -198,7 +198,7 @@ app.post("/stripe/submit-email", (req, res) => {
 
   transporter.sendMail(ensoEmail, (err, data) => {
     if (err) {
-      console.log("There is an error here...!");
+      console.log("There is an error here...!" + err);
     } else {
       console.log("Email sent!");
     }
