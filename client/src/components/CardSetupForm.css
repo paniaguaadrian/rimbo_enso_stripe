@@ -552,6 +552,15 @@
   align-items: center;
 }
 
+#terms {
+  margin-right: 1.5rem;
+}
+
+.terms-container a {
+  text-decoration: underline;
+  color: #41c1bd;
+}
+
 .checkbox_text {
   font-size: 0.6rem;
   width: 18rem;

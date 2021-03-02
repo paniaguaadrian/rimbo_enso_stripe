@@ -15,11 +15,7 @@ import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditio
 ReactDOM.render(
   <Router>
     <Route exact path="/enso-coliving/tenant" component={App} />
-    <Route
-      exact
-      path="/enso-coliving/terms-and-conditions"
-      component={TermsAndConditions}
-    />
+    <Route exact path="/enso-terms" component={TermsAndConditions} />
   </Router>,
   document.getElementById("root")
 );
