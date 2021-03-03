@@ -14,6 +14,15 @@
   }
 }
 
+@media only screen and (max-height: 910px) {
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
 .navbar-item {
   display: flex;
   flex-direction: row;

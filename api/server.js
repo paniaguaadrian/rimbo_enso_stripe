@@ -73,7 +73,7 @@ app.get("/stripe/submit-email", (req, res) => {
   res.send("Email send API..!");
 });
 
-app.post("/stripe/submit-email", (req, res) => {
+app.post("/stripe/submit-email/en", (req, res) => {
   const { tenantsName, tenantsEmail, tenantsPhone, timestamps } = req.body;
 
   const transporter = nodemailer.createTransport(
@@ -98,8 +98,8 @@ app.post("/stripe/submit-email", (req, res) => {
   // Nodemailer
   const tenantEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: tenantsEmail, // tenant's email
-    subject: "Enso&Rimbo - Successful Registration!",
+    to: tenantsEmail,
+    subject: "Enso & Rimbo - Successful Registration!",
     text: "",
     attachments: [
       {
@@ -107,14 +107,17 @@ app.post("/stripe/submit-email", (req, res) => {
         path: "./views/images/rimbo-logo.png",
         cid: "rimbologo",
       },
+      {
+        filename: "Enso_Tenant General Rules & Guidelines_Eng.pdf",
+        path: "./views/images/Enso_Tenant General Rules & Guidelines_Eng.pdf",
+      },
     ],
     template: "index",
   };
-
   const rimboEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: tenantsEmail, // info@rimbo.rent
-    subject: "Enso Coliving - Tenancy ID - New Tenant Confirmation",
+    to: tenantsEmail, // ! info@rimbo.rent
+    subject: "Enso Coliving - New Tenant Confirmation",
     text: "",
     html: `<div>
       <h2 style="color: #6aa3a1">Hello Rimbo team</h2>
@@ -139,27 +142,27 @@ app.post("/stripe/submit-email", (req, res) => {
   };
   const ensoEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: tenantsEmail, // enso...
-    subject: `New tenant at Enso : ${tenantsEmail} | `,
+    to: tenantsEmail, // ! enso...
+    subject: `Rimbo - New Tenant Confirmation | `,
     text: ` ${tenantsName}`,
     html: `<div>
-      <h2 style="color: #6aa3a1">Hey there team enso,</h2>
+      <h2 style="color: #6aa3a1">Hey there team <b>enso</b>,</h2>
       <p>Greetings and good news from Rimbo!<br/>
       There is a new tenant ready to move in with you deposit-free!</p>
       <p>The following Tenant has successfully registered on Rimbo’s platform:</p>
       <ul>
       <li>
-      Tenant's name : ${tenantsName}
+      Tenant Full Name: ${tenantsName}
       </li>
       <li>
-      Tenant's email : ${tenantsEmail}
+      Tenant Email Address: ${tenantsEmail}
       </li>
       <li>
-      Tenant's phone : ${tenantsPhone}
+      Tenant Phone number: ${tenantsPhone}
       </li>
       </ul>
       <p>You can sign the rental agreement with the tenant now!</p>
-      <p>Once it’s all done, please share with us via Google Drive:</p>
+      <p><b>Once it’s all done, please share with us via Google Drive:</b></p>
       <ul>
       <li>
       The tenancy details as per the template
@@ -175,7 +178,145 @@ app.post("/stripe/submit-email", (req, res) => {
       
       <h4>Phone & WhatsApp: +34 623 063 769<br/>
       E-Mail: info@rimbo.com<br/>
-      E-Mail:>Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
+      Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
+      </h4>
+      </div>`,
+  };
+
+  transporter.sendMail(tenantEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
+
+  transporter.sendMail(rimboEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
+
+  transporter.sendMail(ensoEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
+
+  res.status(200).json();
+});
+
+app.post("/stripe/submit-email/es", (req, res) => {
+  const { tenantsName, tenantsEmail, tenantsPhone, timestamps } = req.body;
+
+  const transporter = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
+  let options = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "indexes",
+    },
+    viewPath: "views/",
+  };
+
+  transporter.use("compile", hbs(options));
+
+  // Nodemailer
+  const tenantEmail = {
+    from: "Enso | Rimbo info@rimbo.rent",
+    to: tenantsEmail,
+    subject: "Enso & Rimbo - Registro completado con éxito!",
+    text: "",
+    attachments: [
+      {
+        filename: "rimbo-logo.png",
+        path: "./views/images/rimbo-logo.png",
+        cid: "rimbologo",
+      },
+      {
+        filename: "Enso_Inquilino_Guia_Reglas Generales_Es.pdf",
+        path: "./views/images/Enso_Inquilino_Guia_Reglas Generales_Es.pdf",
+      },
+    ],
+    template: "index",
+  };
+  const rimboEmail = {
+    from: "Enso | Rimbo info@rimbo.rent",
+    to: tenantsEmail, // ! info@rimbo.rent
+    subject: "Enso Coliving - New Tenant Confirmation",
+    text: "",
+    html: `<div>
+      <h2 style="color: #6aa3a1">Hello Rimbo team</h2>
+      <p>Congrats! A new Tenant is joining Enso Coliving:</p>
+      <ul>
+      <li>
+      Tenant's name : ${tenantsName}
+      </li>
+      <li>
+      Tenant's email : ${tenantsEmail}
+      </li>
+      <li>
+      Tenant's phone : ${tenantsPhone}
+      </li>
+      <li>
+      T&C signed and BA provided on: ${timestamps}
+      </li>
+      </ul>
+      <p>Check if the user has been successfully created in Stripe and review SEPA information.
+      Follow up for a contract and documents until closed.</p>
+      </div>`,
+  };
+  const ensoEmail = {
+    from: "Enso | Rimbo info@rimbo.rent",
+    to: tenantsEmail, // ! ENSO...
+    subject: `Rimbo - Nuevo Inquilino Confirmado | `,
+    text: ` ${tenantsName}`,
+    html: `<div>
+      <h2 style="color: #6aa3a1">Hola equipo de <b>Enso</b>,</h2>
+      <p>¡Saludos y buenas noticias de parte de Rimbo!<br/>
+      ¡Hay un inquilino que está listo para mudarse sin depósito!</p>
+      <p>El siguiente inquilino se ha registrado correctamente en nuestro sistema:</p>
+      <ul>
+      <li>
+      Nombre Completo: ${tenantsName}
+      </li>
+      <li>
+      Correo Electrónico: ${tenantsEmail}
+      </li>
+      <li>
+      Número de teléfono: ${tenantsPhone}
+      </li>
+      </ul>
+      <p>¡Podéis continuar con la firma del contrato de alquiler con el inquilino!</p>
+      <p><b>Una vez que todo esté listo, por favor, compartid con nosotros en Google Drive:</b></p>
+      <ul>
+      <li>
+      Los detalles del inquilino y del alquiler en el Tenancy Tracker
+      </li>
+      <li>
+      El Anexo al contrato de alquiler de Rimbo
+      </li>
+      </ul>
+      <p>¡Estamos emocionados de que ${tenantsName} se vaya a unir a la familia de
+      Enso/Rimbo!</p>
+      <p>En caso que necesitéis cualquier tipo de ayuda o soporte, estamos aquí para vosotros!</p>
+
+      <h4 style='color:#6aa3a1'>Gestión de Clientes</h4>
+      
+      <h4>Móvil & WhatsApp: +34 623 063 769<br/>
+      E-Mail: info@rimbo.com<br/>
+      Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
       </h4>
       </div>`,
   };

@@ -36,13 +36,13 @@ const CARD_ELEMENT_OPTIONS = {
 };
 
 const CardSetupForm = () => {
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState("spanish"); //spanish
   const [text, setText] = useState({});
 
   const toggleLanguage = () => {
     setLanguage((prev) => {
-      if (prev === "english") return "spanish";
-      return "english";
+      if (prev === "spanish") return "english"; // spanish / english
+      return "spanish"; // spanish
     });
   };
 
@@ -79,7 +79,10 @@ const CardSetupForm = () => {
     const cardElement = elements.getElement("card");
     const api_rimbo_enso_tenant = process.env.REACT_APP_API_RIMBO_ENSO_TENANT;
     const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
-    const api_stripe_enso_email = process.env.REACT_APP_API_STRIPE_ENSO_EMAIL;
+    const api_stripe_enso_email_en =
+      process.env.REACT_APP_API_STRIPE_ENSO_EMAIL_EN;
+    const api_stripe_enso_email_es =
+      process.env.REACT_APP_API_STRIPE_ENSO_EMAIL_ES;
 
     setProcessingTo(true);
 
@@ -88,13 +91,18 @@ const CardSetupForm = () => {
     // "http://localhost:8080/stripe/card-wallet" (D)
     // `${api_stripe_enso}` (P)
     // * Emails Action
-    // "http://localhost:8080/stripe/submit-email" (D)
-    // `${api_stripe_enso_email}` (P)
+    // ? English version
+    // "http://localhost:8080/stripe/submit-email/en" (D)
+    // `${api_stripe_enso_email_en}` (P)
+    // ?  Spanish version
+    // "http://localhost:8080/stripe/submit-email/es" (D)
+    // `${api_stripe_enso_email_es}` (P)
     // * Send data to Rimbo API
     // "http://localhost:8081/api/tenants/enso" (D)
     // `${api_rimbo_enso_tenant}` (P)
 
     try {
+      // ! Stripe Action
       const { data: client_secret } = await axios.post(`${api_stripe_enso}`, {
         tenantsName,
         tenantsEmail,
@@ -119,6 +127,7 @@ const CardSetupForm = () => {
       } else {
         setIsSuccessfullySubmitted(true);
 
+        // ! Send data to Rimbo API
         await axios.post(`${api_rimbo_enso_tenant}`, {
           tenantsName: tenantsName,
           tenantsEmail: tenantsEmail,
@@ -127,12 +136,23 @@ const CardSetupForm = () => {
           propertyManagerName: propertyManagerName,
         });
 
-        await axios.post(`${api_stripe_enso_email}`, {
-          tenantsName,
-          tenantsEmail,
-          tenantsPhone,
-          timestamps,
-        });
+        if (language === "english") {
+          // ! Emails Action ENGLISH
+          await axios.post(`${api_stripe_enso_email_en}`, {
+            tenantsName,
+            tenantsEmail,
+            tenantsPhone,
+            timestamps,
+          });
+        } else {
+          // ! Emails Action SPANISH
+          await axios.post(`${api_stripe_enso_email_es}`, {
+            tenantsName,
+            tenantsEmail,
+            tenantsPhone,
+            timestamps,
+          });
+        }
       }
     } catch (err) {
       setCheckoutError(err.message);
