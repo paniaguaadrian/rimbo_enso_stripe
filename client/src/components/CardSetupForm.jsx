@@ -6,6 +6,9 @@ import Loader from "react-loader-spinner";
 // Stripe Components
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 
+// nanoid
+import { nanoid } from "nanoid";
+
 // Images
 import EnsoImage from "../images/enso-coliving-success.jpg";
 import StripeLogo from "../images/secure-payments.png";
@@ -77,12 +80,14 @@ const CardSetupForm = () => {
       .replace(/T/, " ")
       .replace(/\..+/, "");
     const cardElement = elements.getElement("card");
-    const api_rimbo_enso_tenant = process.env.REACT_APP_API_RIMBO_ENSO_TENANT;
-    const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
-    const api_stripe_enso_email_en =
-      process.env.REACT_APP_API_STRIPE_ENSO_EMAIL_EN;
-    const api_stripe_enso_email_es =
-      process.env.REACT_APP_API_STRIPE_ENSO_EMAIL_ES;
+    const randomID = nanoid();
+
+    // const api_rimbo_enso_tenant = process.env.REACT_APP_API_RIMBO_ENSO_TENANT;
+    // const api_stripe_enso = process.env.REACT_APP_API_STRIPE_ENSO;
+    // const api_stripe_enso_email_en =
+    //   process.env.REACT_APP_API_STRIPE_ENSO_EMAIL_EN;
+    // const api_stripe_enso_email_es =
+    //   process.env.REACT_APP_API_STRIPE_ENSO_EMAIL_ES;
 
     setProcessingTo(true);
 
@@ -103,11 +108,14 @@ const CardSetupForm = () => {
 
     try {
       // ! Stripe Action
-      const { data: client_secret } = await axios.post(`${api_stripe_enso}`, {
-        tenantsName,
-        tenantsEmail,
-        tenantsPhone,
-      });
+      const { data: client_secret } = await axios.post(
+        "http://localhost:8080/stripe/card-wallet",
+        {
+          tenantsName,
+          tenantsEmail,
+          tenantsPhone,
+        }
+      );
 
       const { error } = await stripe.confirmCardSetup(client_secret, {
         payment_method: {
@@ -128,28 +136,31 @@ const CardSetupForm = () => {
         setIsSuccessfullySubmitted(true);
 
         // ! Send data to Rimbo API
-        await axios.post(`${api_rimbo_enso_tenant}`, {
+        await axios.post("http://localhost:8081/api/tenants/enso", {
           tenantsName: tenantsName,
           tenantsEmail: tenantsEmail,
           tenantsPhone: tenantsPhone,
           isAccepted: isAccepted,
           propertyManagerName: propertyManagerName,
+          randomID: randomID,
         });
 
         if (language === "english") {
           // ! Emails Action ENGLISH
-          await axios.post(`${api_stripe_enso_email_en}`, {
+          await axios.post("http://localhost:8080/stripe/submit-email/en", {
             tenantsName,
             tenantsEmail,
             tenantsPhone,
+            randomID,
             timestamps,
           });
         } else {
           // ! Emails Action SPANISH
-          await axios.post(`${api_stripe_enso_email_es}`, {
+          await axios.post("http://localhost:8080/stripe/submit-email/es", {
             tenantsName,
             tenantsEmail,
             tenantsPhone,
+            randomID,
             timestamps,
           });
         }
@@ -256,7 +267,7 @@ const CardSetupForm = () => {
                   <p className="checkbox_text">
                     {text.terms1}{" "}
                     <a
-                      href="/enso-terms"
+                      href="/terms"
                       target="_blank"
                       rel="noreferrer"
                       className="link-tag"

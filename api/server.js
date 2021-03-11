@@ -74,7 +74,13 @@ app.get("/stripe/submit-email", (req, res) => {
 });
 
 app.post("/stripe/submit-email/en", (req, res) => {
-  const { tenantsName, tenantsEmail, tenantsPhone, timestamps } = req.body;
+  const {
+    tenantsName,
+    tenantsEmail,
+    tenantsPhone,
+    randomID,
+    timestamps,
+  } = req.body;
 
   const transporter = nodemailer.createTransport(
     sgTransport({
@@ -113,11 +119,14 @@ app.post("/stripe/submit-email/en", (req, res) => {
       },
     ],
     template: "index",
+    context: {
+      tenantsName,
+    },
   };
   const rimboEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
     to: tenantsEmail, // ! info@rimbo.rent
-    subject: "Enso Coliving - New Tenant Confirmation",
+    subject: "TenantID:Enso Coliving - New Tenant Confirmation",
     text: "",
     html: `<div>
       <h2 style="color: #6aa3a1">Hello Rimbo team</h2>
@@ -134,6 +143,9 @@ app.post("/stripe/submit-email/en", (req, res) => {
       </li>
       <li>
       T&C signed and BA provided on: ${timestamps}
+      </li>
+      <li>
+      Tenant's ID: ${randomID}
       </li>
       </ul>
       <p>Check if the user has been successfully created in Stripe and review SEPA information.
@@ -249,7 +261,10 @@ app.post("/stripe/submit-email/es", (req, res) => {
         path: "./views/images/Enso_Inquilino_Guia_Reglas Generales_Es.pdf",
       },
     ],
-    template: "index",
+    template: "indexes",
+    context: {
+      tenantsName,
+    },
   };
   const rimboEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
