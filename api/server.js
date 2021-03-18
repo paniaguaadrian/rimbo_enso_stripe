@@ -82,9 +82,6 @@ app.post("/stripe/submit-email/en", (req, res) => {
     timestamps,
   } = req.body;
 
-  const rimboEmailAddress = "info@rimbo.rent";
-  const ensoEmailAddress = "hello@ensospaces.com";
-
   const transporter = nodemailer.createTransport(
     sgTransport({
       auth: {
@@ -128,8 +125,8 @@ app.post("/stripe/submit-email/en", (req, res) => {
   };
   const rimboEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: rimboEmailAddress,
-    subject: "TenantID:Enso Coliving - New Tenant Confirmation",
+    to: "info@rimbo.rent",
+    subject: "Enso Coliving - New Tenant Confirmation",
     text: "",
     html: `<div>
       <h2 style="color: #6aa3a1">Hello Rimbo team</h2>
@@ -157,7 +154,7 @@ app.post("/stripe/submit-email/en", (req, res) => {
   };
   const ensoEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: ensoEmailAddress,
+    to: "hello@ensospaces.com",
     subject: `Rimbo - New Tenant Confirmation | `,
     text: ` ${tenantsName}`,
     html: `<div>
@@ -271,7 +268,7 @@ app.post("/stripe/submit-email/es", (req, res) => {
   };
   const rimboEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: tenantsEmail, // ! info@rimbo.rent
+    to: "info@rimbo.rent",
     subject: "Enso Coliving - New Tenant Confirmation",
     text: "",
     html: `<div>
@@ -297,7 +294,7 @@ app.post("/stripe/submit-email/es", (req, res) => {
   };
   const ensoEmail = {
     from: "Enso | Rimbo info@rimbo.rent",
-    to: tenantsEmail, // ! ENSO...
+    to: "hello@ensospaces.com",
     subject: `Rimbo - Nuevo Inquilino Confirmado | `,
     text: ` ${tenantsName}`,
     html: `<div>
