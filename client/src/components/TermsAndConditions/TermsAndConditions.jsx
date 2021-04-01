@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
       <img src={RimboLogo} alt="" className="rimbo-logo-terms" />
       <h1>
         TÉRMINOS Y CONDICIONES GENERALES PARA EL USO DE LOS SERVICIOS DE RIMBO
-        EN LOS CONTRATOS DE ARRENDAMIENTO DE ENSO CO-LIVING
+        EN LOS CONTRATOS DE ARRENDAMIENTO PARA USO DISTINTO DEL DE VIVIENDA
       </h1>
       <h2> 1. INTRODUCCIÓN</h2>
       <p>
@@ -21,117 +21,129 @@ const TermsAndConditions = () => {
         </a>{" "}
         (la “<b>Web</b>”) y a nuestra aplicación (la “<b>Plataforma”</b>), todos
         los cuales son propiedad y operados por nosotros, esto es, RIMBO RENT
-        SOLUTIONS, S.L., una entidad española, actualmente con domicilio social
-        en la calle Tuset 32, entlo. 3ª, 08006 Barcelona (España), titular del
-        número de identificación fiscal español (NIF) B-67.416.594 e inscrita en
-        el Registro Mercantil de Barcelona en el Tomo 45051, Folio 12 y Hoja
+        SOLUTIONS, S.L., compañía española con domicilio social en la calle
+        Tuset 32, entlo. 3ª, 08006 Barcelona (España), titular del número de
+        identificación fiscal español (NIF) B-67.416.594 e inscrita en el
+        Registro Mercantil de Barcelona en el Tomo 45051, Folio 12 y Hoja
         B475485 (colectivamente, “<b>Rimbo”</b>, “<b>nosotros</b>,” o “
         <b>nuestro</b>”).
       </p>
       <p>
         Lea atentamente este Acuerdo antes de contratar nuestros Servicios (como
         se definen a continuación), ya que constituye un contrato vinculante
-        entre usted y nosotros. Al iniciar sesión en la Web, utilizar nuestra
-        Plataforma o contratar nuestros Servicios, usted garantiza que tiene al
-        menos dieciocho (18) años de edad.
+        entre el Arrendador, el Inquilino y Rimbo. Al iniciar sesión en la Web,
+        utilizar nuestra Plataforma o contratar nuestros Servicios, el Inquilino
+        garantiza que tiene al menos dieciocho (18) años de edad.
       </p>
       <p>
-        El uso por su parte de nuestra Web o Plataforma puede implicar la
-        recopilación y transmisión de cierta información personal u otros datos
-        por parte de Rimbo. Las políticas que rigen el uso que hacemos de dichos
-        datos se establecen en nuestra Política de Privacidad:
-        https://rimbo.rent/politica-privacidad/, que ha sido aceptada por usted
-        con anterioridad a estas Condiciones Generales.
+        El uso por parte del Inquilino de nuestra Web o Plataforma puede
+        implicar la recopilación y transmisión de cierta información personal u
+        otros datos por parte de Rimbo. Las políticas que rigen el uso que
+        hacemos de dichos datos se establecen en nuestra Política de Privacidad:
+        <a href="https://rimbo.rent/politica-privacidad/" blank="true">
+          {" "}
+          https://rimbo.rent/politica-privacidad/
+        </a>
+        , que ha sido aceptada por el Inquilino con anterioridad a estas
+        Condiciones Generales.
       </p>
       <h2>2. LECTURA Y ACEPTACIÓN DE ESTAS CONDICIONES GENERALES</h2>
       <p>
         De conformidad con lo dispuesto en el artículo 23 de la Ley 34/2002, de
         11 de julio, de Servicios de la Sociedad de la Información y de Comercio
-        Electrónico, su aceptación de estas Condiciones Generales se confirmará
-        haciendo clic en el botón “Al contratar los servicios de Rimbo usted
-        acepta las condiciones generales y la política de privacidad”. Esto le
-        permitirá descargar, leer y verificar estas Condiciones Generales y, si
-        procede, aceptar cada uno de ellos sin perjuicio del hecho de que Rimbo
-        pueda, en cualquier momento, modificar las cláusulas de estas
-        Condiciones Generales de conformidad con la Cláusula 20 siguiente.
+        Electrónico, la aceptación por parte del Inquilino de estas Condiciones
+        Generales se confirmará haciendo clic en el botón “Al contratar los
+        servicios de Rimbo usted acepta las condiciones generales y la política
+        de privacidad”. Esto le permitirá descargar, leer y verificar estas
+        Condiciones Generales y, si procede, aceptar cada uno de ellos sin
+        perjuicio del hecho de que Rimbo pueda, en cualquier momento, modificar
+        las cláusulas de estas Condiciones Generales de conformidad con la
+        Cláusula 20 siguiente.
       </p>
       <p>
-        Desde el momento en que usted acepte estas Condiciones Generales, se le
-        considerará como nuestro “Cliente” y, por lo tanto, quedará obligado por
-        el contenido de estas Condiciones Generales. Si desea leer estas
-        Condiciones Generales con mayor detalle, siempre están disponibles en
-        nuestra Plataforma. Hay documentos adicionales al presente Acuerdo. Por
-        favor, asegúrese de revisar minuciosamente cada documento antes de
+        Desde el momento en que el Inquilino acepte estas Condiciones Generales,
+        se le considerará como nuestro “Cliente” y, por lo tanto, quedará
+        obligado por el contenido de estas Condiciones Generales. Si desea leer
+        estas Condiciones Generales con mayor detalle, siempre están disponibles
+        en nuestra Plataforma. Hay documentos adicionales al presente Acuerdo.
+        Por favor, asegúrese de revisar minuciosamente cada documento antes de
         aceptar este Acuerdo.
       </p>
       <p>
-        Si usted lo autoriza, también podremos enviarle, cuando corresponda,
-        cualquier oferta, promoción o información que pueda ser de su interés, y
-        podremos también gestionar cualquier otra información según sea
-        necesario, si así lo ha autorizado.
+        Si el Inquilino lo autoriza, también podremos enviarle, cuando
+        corresponda, cualquier oferta, promoción o información que pueda ser de
+        su interés, y podremos también gestionar cualquier otra información
+        según sea necesario, si así lo ha autorizado.
       </p>
       <p>
-        En los párrafos siguientes leerá el contenido de estas Condiciones
-        Generales, los cuales deberá aceptar para registrarse de forma completa,
-        efectiva y vinculante en la Plataforma.
+        En los párrafos siguientes se reproduce el contenido de estas
+        Condiciones Generales, las cuales deberá aceptar para registrarse de
+        forma completa, efectiva y vinculante en la Plataforma.
       </p>
       <h2>3. DEFINICIONES</h2>
       <ol className="list-lower-alpha">
         <li>
-          <b>Arrendador: </b> significa <b>ENSO SPACES, S.L.</b>, compañía
-          española provista de NIF B67562025, con quien el Arrendatario ha
-          suscrito, o está a punto de suscribir, un Contrato de Arrendamiento.
+          <b>Arrendador: </b> significa la persona física o jurídica propietaria
+          o usufructuaria del Inmueble arrendado por el Inquilino, o bien la
+          persona física o jurídica que es titular de un derecho contractual que
+          le autoriza a explotar económicamente, o a gestionar la explotación
+          económica, del Inmueble incluso a través de su arrendamiento o
+          subarrendamiento a terceros, estando autorizado en este último caso a
+          suscribir las presentes Condiciones Generales.
         </li>
         <li>
           <b>Autorización de Cargo:</b> significa la autorización de tarjeta de
-          débito y/o crédito que el Arrendatario hace a favor de Rimbo al
-          aceptar estas Condiciones Generales para cobrar en sus Métodos de Pago
-          cualquier Obligación Cubierta.
+          débito y/o crédito que el Inquilino hace a favor de Rimbo al aceptar
+          estas Condiciones Generales para cobrar en sus Métodos de Pago
+          cualquier Obligación Garantizada.
         </li>
         <li>
           <b>Aval a Primer Requerimiento:</b> se refiere al aval que otorgamos
           al Arrendador y que podrá ser ejecutado por el Arrendador en garantía
-          de cualquiera de sus obligaciones económicas que puedan derivarse de
-          las Obligaciones Cubiertas de conformidad con estas Condiciones
-          Generales.
+          de cualquiera de las obligaciones económicas del Inquilino que puedan
+          derivarse de las Obligaciones Garantizadas de conformidad con estas
+          Condiciones Generales.
         </li>
         <li>
           <b>Cliente:</b> tendrá el significado atribuido en la Cláusula 5.
         </li>
         <li>
           <b>Cobros Permitidos:</b> se refiere a los cobros realizados por Rimbo
-          en los Métodos de Pago dentro de la Autorización de Cargo.
+          en los Métodos de Pago del Inquilino dentro de la Autorización de
+          Cargo.
         </li>
         <li>
           <b>Contrato de Arrendamiento:</b> se refiere al contrato de
-          arrendamiento firmado o que va a ser firmado por el Arrendatario y el
-          Arrendador para el alquiler de la Habitación.
+          arrendamiento firmado o que va a ser firmado por el Inquilino y el
+          Arrendador para el alquiler del Inmueble.
         </li>
         <li>
           <b>Correo Electrónico de Asistencia:</b> significa la siguiente
-          dirección de correo electrónico de Rimbo: info@rimbo.rent, a la que
-          puede dirigirse en caso de que tenga alguna consulta o duda, o en caso
-          de que tenga algún problema técnico al utilizar la Web o la
+          dirección de correo electrónico de Rimbo:{" "}
+          <a href="mailto:info@rimbo.rent">info@rimbo.rent</a>, a la que puede
+          dirigirse el Inquilino en caso de que tenga alguna consulta o duda, o
+          en caso de que tenga algún problema técnico al utilizar la Web o la
           Plataforma.
         </li>
         <li>
+          <b>Inquilino:</b> significa el arrendatario del Inmueble, con quien el
+          Arrendador ha suscrito, o está a punto de suscribir, un Contrato de
+          Arrendamiento.
+        </li>
+        <li>
           <b>Fianza en Metálico:</b> significa la fianza mediante la cual el
-          Arrendatario transfiere una cantidad de dinero al Arrendador como
+          Inquilino transfiere una cantidad de dinero al Arrendador como
           garantía de determinadas obligaciones arrendaticias y que es
           sustituida por los Servicios de conformidad con estas Condiciones
           Generales.
         </li>
         <li>
-          <b>Habitación:</b> significa la dependencia objeto del Contrato de
+          <b>Inmueble:</b> significa el inmueble objeto del Contrato de
           Arrendamiento.
         </li>
         <li>
-          <b>Inmueble:</b> significa el inmueble dentro del cual se encuentra la
-          Habitación objeto del Contrato de Arrendamiento.
-        </li>
-        <li>
-          <b>Métodos de Pago:</b> significa su(s) tarjeta(s) de crédito, débito
-          y/o cuenta(s) bancaria(s) que el Arrendatario ha incluido en su Perfil
+          <b>Métodos de Pago:</b> significa la(s) tarjeta(s) de crédito, débito
+          y/o cuenta(s) bancaria(s) que el Inquilino ha incluido en su Perfil
           para realizar los Cobros Permitidos.
         </li>
         <li>
@@ -139,52 +151,59 @@ const TermsAndConditions = () => {
           Cláusula 6.2.
         </li>
         <li>
-          <b>Perfil:</b> significa el perfil personal del Arrendatario al
-          introducir su nombre de usuario y contraseña en la Plataforma,
-          incluyendo todos los detalles de su relación contractual con Rimbo y
-          con el Arrendador.
+          <b>Perfil:</b> significa el perfil personal del Inquilino al que
+          accede al introducir su nombre de usuario (en caso que sea aplicable)
+          y contraseña en la Plataforma, incluyendo todos los detalles de su
+          relación contractual con Rimbo y con el Arrendador.
         </li>
         <li>
           <b>Plazo de Autorización de Cargo:</b> significa el período durante el
           cual Rimbo está autorizado a realizar Cobros Permitidos en nombre del
-          Arrendatario. A menos que se indique lo contrario en el Perfil del
-          Arrendatario, el Plazo de Autorización de Cargo será el plazo del
+          Arrendador. A menos que se indique lo contrario en el Perfil del
+          Inquilino, el Plazo de Autorización de Cargo será el plazo del
           Contrato de Arrendamiento más sesenta (60) días.
         </li>
         <li>
-          <b>Servicios:</b> significa los servicios de garantía que Rimbo
-          proporciona, lo que sustituye el pago por parte del Arrendatario de
-          una Fianza en Metálico al Arrendador.
+          <b>Servicios:</b> significa los servicios de garantía respecto a las
+          Obligaciones Garantizadas que Rimbo proporciona en favor del
+          Arrendador, lo que sustituye el pago por parte del Inquilino de una
+          Fianza en Metálico al Arrendador.
         </li>
         <li>
           <b>Valor de la Autorización de Cargo: </b>significa el importe máximo
-          que se cobrará en los Métodos de Pago del Arrendatario en aplicación
-          de la Autorización de Cargo cuyo importe específico se indicará cuando
-          el Arrendatario contrate nuestros Servicios, así como en su Perfil.
+          que se cobrará en los Métodos de Pago del Inquilino en aplicación de
+          la Autorización de Cargo cuyo importe específico se indicará cuando el
+          Inquilino contrate nuestros Servicios, así como en su Perfil.
         </li>
       </ol>
       <h2>4. OBJETO Y ALCANCE</h2>
       <p>
-        Estas Condiciones Generales describirán y regularán los Servicios que
-        Rimbo le proporcionará al Arrendatario al registrarse en nuestra Web o
-        Plataforma, así como sus derechos y obligaciones y los del Arrendador y
-        Rimbo.
+        Estas Condiciones Generales describen y regulan los Servicios que Rimbo
+        proporciona al Inquilino en favor del Arrendador al registrarse en
+        nuestra Web o Plataforma, así como los derechos y obligaciones del
+        Inquilino, del Arrendador y de Rimbo.
+      </p>
+      <p>
+        Los Servicios prestados por Rimbo tienen naturaleza de garantía
+        financiera y en modo alguno constituyen un contrato de seguro ni la
+        cobertura de riesgos asegurables sobre los inmuebles, daños en los
+        mismos o la pérdida de beneficios en caso de un evento de daños, por
+        parte de Rimbo.
       </p>
       <h2>5. REGISTRO</h2>
       <p>
-        El Arrendatario se convertirá en cliente de la Plataforma (“Cliente”)
-        una vez haya realizado el registro final en la Plataforma, para lo cual
-        deberá realizar lo siguiente:
+        El Inquilino se convertirá en cliente de la Plataforma (“<b>Cliente</b>
+        ”) una vez haya realizado el registro final en la Plataforma, para lo
+        cual deberá realizar lo siguiente:
       </p>
       <ol className="list-lower-roman">
         <li>
-          Aceptar estas Condiciones Generales de conformidad con la Cláusula 2
-          del presente documento;
+          Facilitar la información personal requerida en el proceso de registro
+          de la Plataforma;
         </li>
         <li>Conceder a Rimbo la Autorización de Cargo correspondiente; y</li>
         <li>
-          Facilitarnos la información personal requerida en el proceso de
-          registro.
+          Aceptar estas Condiciones Generales de conformidad con la Cláusula 2.
         </li>
       </ol>
       <h2>6. SERVICIOS</h2>
@@ -192,38 +211,35 @@ const TermsAndConditions = () => {
         6.1 <span>Descripción de los Servicios</span>
       </h3>
       <p>
-        Rimbo proporciona un servicio de garantía para que el Arrendatario pueda
-        suscribir el Contrato de Arrendamiento sin pagar una Fianza <b>e</b>n
-        Metálico al Arrendador (los “<b>Servicios</b>”). En este sentido, Rimbo
-        garantiza al Arrendador el pago de las Obligaciones Cubiertas en caso de
-        que el Arrendatario no lo haga, todo lo anterior de conformidad con las
-        condiciones establecidas en estas Condiciones Generales.
+        Rimbo proporciona un servicio de garantía para que el Inquilino pueda
+        suscribir el Contrato de Arrendamiento sin entregar una Fianza en
+        Metálico al Arrendador (los “<b>Servicios</b>”). A cambio de estos
+        Servicios, el Inquilino autoriza a Rimbo a cobrar en sus Métodos de Pago
+        en nombre del Arrendador los importes solicitados por este último en
+        cada momento.
       </p>
       <p>
-        A cambio de estos Servicios, el Arrendatario nos autoriza a cobrar en
-        sus Métodos de Pago en nombre del Arrendador los importes solicitados
-        por el Arrendador en ejercicio del Aval a Primer Requerimiento.
+        En este sentido, Rimbo garantiza al Arrendador el pago de las
+        Obligaciones Garantizadas en caso de que el Inquilino no lo haga, todo
+        lo anterior de conformidad con las condiciones establecidas en estas
+        Condiciones Generales.
       </p>
       <p>
-        Por lo tanto, mediante el uso de nuestros Servicios, el Arrendatario
-        puede evitar el pago de una Fianza <b>e</b>n Metálico al Arrendador. En
-        ese sentido, si el Arrendatario ya ha pagado una Fianza <b>e</b>n
-        Metálico al Arrendador, suscribe los Servicios y el Arrendador ha
-        aceptado utilizar Rimbo, el Arrendador le reembolsará la Fianza <b>e</b>
-        n Metálico.
+        Debe tenerse en cuenta que Rimbo garantizará las Obligaciones
+        Garantizadas al Arrendador solidariamente y a primer requerimiento, de
+        conformidad con las condiciones establecidas en estas Condiciones
+        Generales. Por lo tanto, el Inquilino estará obligado a reembolsar
+        inmediatamente a Rimbo cualquier cantidad pagada por Rimbo al
+        Arrendador.
       </p>
       <p>
-        Debe tenerse en cuenta que Rimbo garantizará las Obligaciones Cubiertas
-        al Arrendador solidariamente y a primer requerimiento, de conformidad
-        con las condiciones establecidas en estas Condiciones Generales. Por lo
-        tanto, el Arrendatario estará obligado a reembolsar inmediatamente a
-        Rimbo cualquier cantidad pagada por Rimbo al Arrendador.
-      </p>
-      <p>
-        A efectos aclaratorios, los Servicios que proporciona Rimbo pueden
-        sustituir el pago de una Fianza en Metálico, pero no sustituyen otras
-        garantías de ninguna institución pública que puedan existir. Rimbo no
-        garantiza la compatibilidad entre nuestros Servicios y las posibles
+        A efectos aclaratorios, los Servicios tienen naturaleza de garantía
+        financiera y no constituyen en modo alguno un contrato de seguro ni la
+        cobertura de riesgos asegurables sobre los inmuebles, daños en los
+        mismos o la pérdida de beneficios en caso de un evento de daños, por
+        parte de Rimbo, ni sustituyen fianzas legales de carácter imperativo ni
+        otras garantías de ninguna institución pública que puedan existir. Rimbo
+        no garantiza la compatibilidad entre sus Servicios y las posibles
         garantías de instituciones públicas.
       </p>
       <h3>
@@ -236,146 +252,152 @@ const TermsAndConditions = () => {
           los daños causados en el Inmueble, salvo aquellos derivados del
           desgaste provocado por su normal uso;
         </li>
-        <li>las mensualidades de alquiler impagadas por el Inquilino;</li>
+        <li>las mensualidades de alquiler impagadas por el Inquilino; y</li>
         <li>
-          las facturas impagadas de suministros durante el Contrato de
-          Arrendamiento;
-        </li>
-        <li>
-          las compensaciones derivadas del incumplimiento del preaviso mínimo
-          del Contrato de Arrendamiento; y
-        </li>
-        <li>
-          el pago de la Fianza en Metálico al Arrendador en caso de que este
-          cancele este Acuerdo con Rimbo antes de la terminación del Contrato de
+          las facturas de suministros impagadas durante el Contrato de
           Arrendamiento.
         </li>
       </ol>
       <p>
-        Asimismo, los cobros en virtud de las Obligaciones Cubiertas serán hasta
-        un importe máximo de un mes del alquiler mensual inicial del Contrato de
-        Arrendamiento (el “<b>Valor de la Autorización de Cargo</b>”).
+        Asimismo, los cobros en virtud de las Obligaciones Garantizadas serán
+        hasta un importe máximo, según elijan el Arrendador y el Inquilino al
+        contratar los Servicios, equivalente a (i) una (1) vez el alquiler
+        mensual inicial del Contrato de Arrendamiento; o bien (ii) dos (2) veces
+        el alquiler mensual inicial del Contrato de Arrendamiento (el “
+        <b>Valor de la Autorización de Cargo</b>”).
       </p>
       <p>
-        En conjunto, el importe total de los cobros de las Obligaciones
-        Cubiertas no excederá del Valor de la Autorización de Cargo. Por lo
-        tanto, cualquier cobro de Obligaciones Cubiertas se descontará del Valor
-        de la Autorización de Cargo.
+        Por tanto, en conjunto, el importe total de los cobros de las
+        Obligaciones Garantizadas no excederá del Valor de la Autorización de
+        Cargo. Por lo tanto, cualquier cobro parcial de Obligaciones
+        Garantizadas se descontará del Valor de la Autorización de Cargo.
       </p>
       <h2>7. PROCEDIMIENTO DE COBRO</h2>
       <p>
-        A petición del Arrendador, entre la terminación del Contrato de
-        Arrendamiento y el final del Plazo de Autorización de Cargo, Rimbo le
-        cobrará por cualquier Obligación Cubierta exigida por el Arrendador.
+        A petición del Arrendador, en cualquier momento durante el Plazo de
+        Autorización de Cargo, Rimbo le cobrará al Inquilino cualquier
+        mensualidad de alquiler impagada. Por otro lado, los daños causados en
+        el Inmueble y las facturas de suministros impagadas solo podrán ser
+        cobradas por Rimbo al Inquilino, siempre a petición del Arrendador,
+        entre la terminación del Contrato de Arrendamiento y el final del Plazo
+        de Autorización de Cargo. Dichos cobros se realizarán en los Métodos de
+        Pago del Inquilino.
       </p>
-      <p>Dichos cobros se realizarán en sus Métodos de Pago.</p>
       <p>
         El Arrendador incluirá en su comunicación a Rimbo la siguiente
-        información: (i) el importe a cobrar; y (ii) el motivo del cobro. Rimbo
-        confirmará la recepción de la reclamación del Arrendador enviando un
-        correo electrónico al Arrendador. Dentro de un período de cinco (5) días
-        hábiles después de recibir la reclamación del Arrendador, Rimbo
-        procesará la reclamación y realizará el cobro o enviará un correo
-        electrónico al Arrendador con las razones por las que el cobro no puede
-        ser procesado.
+        información: (i) el importe a cobrar; (ii) el motivo del cobro; y, en su
+        caso, (iii) el informe de desalojo o ‘check out report’. Rimbo
+        confirmará la recepción de la reclamación enviando un correo electrónico
+        al Arrendador. Dentro de un período de cinco (5) días hábiles después de
+        recibir la reclamación del Arrendador, Rimbo procesará la reclamación y
+        realizará el cobro o enviará un correo electrónico al Arrendador con las
+        razones por las que el cobro no puede ser procesado.
       </p>
       <p>
         Rimbo no hará en ningún caso una valoración de la legitimidad del
         requerimiento del Arrendador. Al aceptar estas Condiciones Generales, el
-        Arrendatario autoriza a Rimbo a cobrarle en sus Métodos de Pago con el
-        fin de satisfacer todas y cada una de las Obligaciones Cubiertas
-        exigidas por el Arrendador, y asume la obligación de pagar primero
-        cualquier cobro hecho por nosotros que cumpla con las condiciones de
-        estas Condiciones Generales, y reclamar contra el Arrendador después, en
-        caso de que considere que el requerimiento del Arrendador es ilegítimo.
+        Inquilino autoriza a Rimbo a cobrarle en sus Métodos de Pago con el fin
+        de satisfacer todas y cada una de las Obligaciones Garantizadas exigidas
+        por el Arrendador, y asume la obligación de pagar primero cualquier
+        cobro hecho por Rimbo que cumpla con las condiciones de estas
+        Condiciones Generales, y reclamar contra el Arrendador después, en caso
+        de que considere que el requerimiento del Arrendador es ilegítimo.
       </p>
       <p>
-        El Arrendatario reconoce y acepta que Rimbo no será responsable en
-        ningún caso de la legitimidad de las reclamaciones del Arrendador, o de
-        los cobros abusivos, ilícitos o malintencionados del Arrendador.
+        El Inquilino reconoce y acepta que Rimbo no será responsable en ningún
+        caso de la legitimidad de las reclamaciones del Arrendador, o de los
+        cobros abusivos, ilícitos o malintencionados del Arrendador.
       </p>
       <p>
         Por otro lado, el Arrendador se compromete a reclamar únicamente
-        créditos legítimos contra el Arrendatario. Además, el Arrendador y el
-        Arrendatario intentarán llegar a una solución amistosa en caso de
-        disputa antes de seguir adelante con el cobro por parte de Rimbo.
+        créditos legítimos contra el Inquilino. Además, el Arrendador y el
+        Inquilino intentarán llegar a una solución amistosa en caso de disputa
+        antes de seguir adelante con el cobro por parte de Rimbo.
       </p>
       <p>
-        Después de haberle cobrado por cualquier cuota de alquiler no pagada,
+        Después de haberle cobrado por cualquier Obligación Garantizada,
         transferiremos el dinero a la cuenta bancaria del Arrendador.
       </p>
       <h2>8. AUTORIZACIÓN DE CARGO</h2>
       <p>
-        Al aceptar estas Condiciones Generales, el Arrendatario autoriza a Rimbo
-        a cobrarle las Obligaciones Cubiertas (los “<b>Cobros Permitidos</b>”),
+        Al aceptar estas Condiciones Generales, el Inquilino autoriza a Rimbo a
+        cobrarle las Obligaciones Garantizadas (los “<b>Cobros Permitidos</b>”),
         en cualquiera de sus Métodos de Pago, y en cualquier momento durante el
         Plazo de Autorización de Cargo.
       </p>
       <p>
         Las modificaciones de los términos de una Autorización de Cargo,
         incluyendo el importe, solo se podrán hacer con nuestro consentimiento y
-        el del Arrendador por escrito. Solicitaremos el consentimiento del
-        Arrendatario para cambios que incrementen su responsabilidad, como
-        aumentos en el Valor de la Autorización de Cargo y/o el Plazo de
-        Autorización de Cargo. Si se renueva el Contrato de Arrendamiento, dicha
-        renovación constituye el consentimiento del Arrendatario a una extensión
-        del Plazo de Autorización de Cargo. Si el Contrato de Arrendamiento
-        incluye un aumento de la Fianza en Metálico requerida, la renovación
-        también constituirá el consentimiento del Arrendatario a un aumento
-        correspondiente del Valor de la Autorización de Cargo.
+        el del Arrendador por escrito. Rimbo siempre solicitará el
+        consentimiento del Inquilino para cambios que incrementen su
+        responsabilidad, como aumentos en el Valor de la Autorización de Cargo
+        y/o el Plazo de Autorización de Cargo. Si se renueva el Contrato de
+        Arrendamiento, dicha renovación constituye el consentimiento del
+        Inquilino a una extensión del Plazo de Autorización de Cargo. Si el
+        Contrato de Arrendamiento incluye un aumento de la Fianza en Metálico
+        requerida, la renovación también constituirá el consentimiento del
+        Inquilino a un aumento correspondiente del Valor de la Autorización de
+        Cargo.
       </p>
       <p>
         Si el Arrendador nos notifica por correo electrónico, o por cualquier
         otro método de comunicación escrita, o carga en la Web, la prórroga del
         Contrato de Arrendamiento y/o el incremento de la Fianza en Metálico,
-        esto también constituirá consentimiento por parte del Arrendatario a una
+        esto también constituirá consentimiento por parte del Inquilino a una
         extensión del Plazo de Autorización de Cargo, así como su consentimiento
         al aumento correspondiente del Valor de la Autorización de Cargo.
       </p>
-      <h2>9. AVAL A PRIMER REQUERIMIENTO Y CESIÓN DE CRÉDITO</h2>
+      <h2>9. AVAL A PRIMER REQUERIMIENTO</h2>
       <h3>
         9.1 <span>Aval a primer requerimiento</span>
       </h3>
       <p>
         Paralelamente a la aceptación de estas Condiciones Generales por parte
-        del Arrendatario, otorgaremos un Aval a Primer Requerimiento a favor del
-        Arrendador mediante el cual le avalaremos, solidariamente y a primer
-        requerimiento, ante el Arrendador, en garantía de las Obligaciones
-        Cubiertas.
+        del Inquilino, Rimbo otorgará un Aval a Primer Requerimiento a favor del
+        Arrendador mediante el cual avalará al Inquilino, solidariamente y a
+        primer requerimiento, ante el Arrendador, en garantía de las
+        Obligaciones Garantizadas.
       </p>
       <p>
-        El Aval a Primer Requerimiento cubrirá hasta un importe máximo de una
-        (1) vez el alquiler mensual inicial del Contrato de Arrendamiento. Por
-        lo tanto, será exigible en cualquier momento durante el Plazo de
-        Autorización de Cargo, para requerir el pago de cualquier Obligación
-        Cubierta hasta el Valor de la Autorización de Cargo.{" "}
+        El Aval a Primer Requerimiento cubrirá hasta un importe máximo, según
+        elijan el Arrendador y el Inquilino al contratar los Servicios,
+        equivalente a (i) una (1) vez el alquiler mensual inicial del Contrato
+        de Arrendamiento; o bien (ii) dos (2) veces el alquiler mensual inicial
+        del Contrato de Arrendamiento. Por lo tanto, será exigible en cualquier
+        momento durante el Plazo de Autorización de Cargo, para requerir el pago
+        de cualquier Obligación Garantizada hasta el Valor de la Autorización de
+        Cargo.
       </p>
       <p>
-        Tras la ejecución del Aval a Primer Requerimiento, el Arrendador tendrá
-        derecho a exigir a Rimbo que pague las Obligaciones Cubiertas. En ese
-        caso, le cobraremos inmediatamente las Obligaciones Cubiertas en sus
-        Métodos de Pago.
+        En caso de que el procedimiento de cobro referido en la Cláusula 7
+        resulte infructuoso, el Arrendador tendrá derecho a ejecutar el Aval a
+        Primer Requerimiento, en cuyo caso Rimbo transferirá al Arrendador el
+        importe correspondiente dentro de un período de diez (10) días a partir
+        de la ejecución. En ese caso Rimbo exigirá al Inquilino que reembolse el
+        referido importe inmediatamente, pudiendo a tal fin hacer un cargo en
+        los Métodos de Pago del Inquilino o bien utilizar las acciones legales
+        que le pudieran corresponder.
       </p>
       <p>
-        El Arrendatario reconoce y acepta que Rimbo, después de asumir la
-        posición del Arrendador como acreedor, podrá contratar los servicios de
-        un tercero cobrador de créditos, mediante una cesión del crédito o una
-        mera contratación de servicios.{" "}
+        El Inquilino reconoce y acepta que Rimbo, después de asumir la posición
+        del Arrendador como acreedor, podrá contratar los servicios de un
+        tercero cobrador de créditos, mediante una cesión del crédito o una mera
+        contratación de servicios.
       </p>
-      <h2>10. Incumplimiento del Arrendatario</h2>
-      <h2>10.1 Incumplimiento del pago de las Obligaciones Cubiertas</h2>
+      <h2>10. INCUMPLIMIENTO DEL INQUILINO</h2>
+      <h2>10.1 Incumplimiento del pago de las Obligaciones Garantizadas</h2>
       <h3>
         10.1.1{" "}
-        <span>Incumplimiento del pago de las Obligaciones Cubiertas</span>
+        <span>Incumplimiento del pago de las Obligaciones Garantizadas</span>
       </h3>
       <p>
         Si un cobro realizado por Rimbo a petición del Arrendador de conformidad
-        con estas Condiciones Generales resulta fallido, Rimbo le informará por
-        correo electrónico de dicho incumplimiento. En ese caso, el Arrendatario
-        dispondrá de un período de dos (2) días para pagar los importes
-        adeudados. Después de ese período, si el Arrendador ejecutase el Aval a
-        Primer Requerimiento, será de aplicación lo dispuesto en la Cláusula
-        10.1.2 siguiente.
+        con estas Condiciones Generales resulta fallido, Rimbo informará al
+        Inquilino por correo electrónico de dicho incumplimiento. En ese caso,
+        el Inquilino dispondrá de un período de dos (2) días para pagar los
+        importes adeudados. Después de ese período, si el Arrendador ejecutase
+        el Aval a Primer Requerimiento, será de aplicación lo dispuesto en la
+        Cláusula 10.1.2 siguiente.
       </p>
       <h3>
         10.1.2{" "}
@@ -385,31 +407,31 @@ const TermsAndConditions = () => {
         </span>
       </h3>
       <p>
-        Tras la ejecución del Aval a Primer Requerimiento, le cobraremos las
-        Obligaciones Cubiertas reclamadas por el Arrendador. En caso de que el
-        cobro resulte fallido, le informaremos por correo electrónico antes de
-        pagar al Arrendador. Después de dicha comunicación, pagaremos al
-        Arrendador los importes correspondientes a las Obligaciones Cubiertas
-        reclamadas.
+        Tras la ejecución del Aval a Primer Requerimiento, Rimbo le cobrará al
+        Inquilino las Obligaciones Garantizadas reclamadas por el Arrendador. En
+        caso de que el cobro resulte fallido, Rimbo informará al Inquilino por
+        correo electrónico antes de pagar al Arrendador. Después de dicha
+        comunicación, Rimbo al Arrendador los importes correspondientes a las
+        Obligaciones Garantizadas reclamadas.
       </p>
       <p>
-        Después de que realicemos dicho pago, el Arrendatario tendrá la
-        obligación de pagar a Rimbo: (i) los importes pagados por Rimbo al
-        Arrendador, incluyendo cualesquiera intereses que el Arrendador pueda
-        haber aplicado de conformidad con el Contrato de Arrendamiento; (ii) el
-        coste incurrido por Rimbo para ejecutar el Aval a Primer Requerimiento,
-        incluyendo honorarios de abogados; (iii) un interés sobre el importe
-        adeudado que se devengará a una tasa anual igual al interés legal más
-        dos (2) puntos porcentuales; y (iv) los daños sufridos por Rimbo como
+        Después de que realicemos dicho pago, el Inquilino tendrá la obligación
+        de pagar a Rimbo: (i) los importes pagados por Rimbo al Arrendador,
+        incluyendo cualesquiera intereses que el Arrendador pueda haber aplicado
+        de conformidad con el Contrato de Arrendamiento; (ii) el coste incurrido
+        por Rimbo para ejecutar el Aval a Primer Requerimiento, incluyendo
+        honorarios de abogados; (iii) un interés sobre el importe adeudado que
+        se devengará a una tasa anual igual al interés legal del dinero más dos
+        (2) puntos porcentuales; y (iv) los daños sufridos por Rimbo como
         consecuencia de su incumplimiento, incluyendo, pero no limitándose a,
         los intereses y cualquier otra pérdida incurrida por Rimbo para obtener
         los fondos necesarios para cumplir con sus obligaciones como garante.
       </p>
       <p>
         En aras de la claridad, en caso de que Rimbo pague el Aval a Primer
-        Requerimiento, el crédito que Rimbo tendrá contra el Arrendatario será
+        Requerimiento, el crédito que Rimbo tendrá contra el Inquilino será
         independiente y autónomo del crédito del Arrendador y, por tanto, el
-        Arrendatario reconoce que no tendrá derecho a plantear ninguna excepción
+        Inquilino reconoce que no tendrá derecho a plantear ninguna excepción
         que pudiera tener derecho a plantear contra el Arrendador.
       </p>
       <h2>11. OBLIGACIONES</h2>
@@ -419,55 +441,59 @@ const TermsAndConditions = () => {
       <ol className="list-lower-alpha">
         <li>
           Otorgar el Aval a Primer Requerimiento al Arrendador avalando al
-          Arrendatario solidariamente y a primer requerimiento ante el
-          Arrendador, en garantía de las Obligaciones Cubiertas;
+          Inquilino solidariamente y a primer requerimiento ante el Arrendador,
+          en garantía de las Obligaciones Garantizadas;
         </li>
         <li>
           Suscribir un contrato de cesión de crédito si existen cualesquiera
-          deudas económicas del Arrendatario con el Arrendador con respecto al
-          Contrato de Arrendamiento que excedan de las Obligaciones Cubiertas;
+          deudas económicas del Inquilino con el Arrendador con respecto al
+          Contrato de Arrendamiento que excedan de las Obligaciones
+          Garantizadas;
         </li>
         <li>
-          Cobrar las Obligaciones Cubiertas dentro del Valor de la Autorización
-          de Cobro cuando lo requiera el Arrendador;
+          Cobrar las Obligaciones Garantizadas dentro del Valor de la
+          Autorización de Cobro cuando lo requiera el Arrendador;
         </li>
         <li>
-          Transferir los fondos de los Cobros Permitidos dentro de un período de
-          cinco (5) días a la cuenta bancaria del Arrendador en caso de que el
-          cobro se realice con éxito;
+          Ejecutar la transferencia de fondos de los Cobros Permitidos dentro de
+          un período de diez (10) días hábiles a la cuenta bancaria del
+          Arrendador en caso de que el cobro se realice con éxito;
         </li>
         <li>
-          Darle instrucciones precisas para registrarse en la Web o la
-          Plataforma;
-        </li>
-        <li>
-          Resolver cualquier consulta y/o duda que pueda tener el Arrendatario a
+          Resolver cualquier consulta y/o duda que pueda tener el Inquilino a
           través del Correo Electrónico de Asistencia; y
         </li>
         <li>
-          Mantener todos sus datos personales a salvo y seguros y eliminarlos
+          Mantener todos los datos personales a salvo y seguros y eliminarlos
           después de la terminación de nuestra relación contractual. Sin
-          embargo, en algunos casos, podremos conservar sus datos personales
-          durante el tiempo necesario para ejercer o defender reclamaciones,
-          requisitos, responsabilidades y obligaciones legales y/o contractuales
-          derivadas del procesamiento, siempre debidamente protegidos.
+          embargo, en algunos casos, podremos conservar datos personales durante
+          el tiempo necesario para ejercer o defender reclamaciones, requisitos,
+          responsabilidades y obligaciones legales y/o contractuales derivadas
+          del procesamiento, siempre debidamente protegidos.Mantener todos los
+          datos personales a salvo y seguros y eliminarlos después de la
+          terminación de nuestra relación contractual. Sin embargo, en algunos
+          casos, podremos conservar datos personales durante el tiempo necesario
+          para ejercer o defender reclamaciones, requisitos, responsabilidades y
+          obligaciones legales y/o contractuales derivadas del procesamiento,
+          siempre debidamente protegidos.
         </li>
       </ol>
       <h3>
         11.2 <span>Obligaciones del Arrendador:</span>
       </h3>
       <ol className="list-lower-alpha">
+        <li>Pagar los Servicios de Rimbo en debido tiempo y forma;</li>
         <li>
-          El Arrendador deberá pagar los Servicios de Rimbo en debido tiempo y
-          forma;
+          Solicitar únicamente el pago de créditos existentes, legales y
+          legítimos de conformidad con el Contrato de Arrendamiento; y
         </li>
         <li>
-          El Arrendador únicamente solicitará el pago de créditos existentes,
-          legales y legítimos de conformidad con el Contrato de Arrendamiento.
+          Mantener a Rimbo informada, de forma proactiva y puntual, de cualquier
+          cambio en el Contrato de Arrendamiento.
         </li>
       </ol>
       <h3>
-        11.3 <span>Obligaciones del Arrendatario:</span>
+        11.3 <span>Obligaciones del Inquilino:</span>
       </h3>
       <ol className="list-lower-alpha">
         <li>Registrarse en la Plataforma;</li>
@@ -489,9 +515,9 @@ const TermsAndConditions = () => {
           Mantener los Métodos de Pago actualizados, asegurarse de que son
           válidos y que no han caducado, y sustituir cualquiera de los Métodos
           de Pago por uno alternativo con fondos suficientes para cubrir, dado
-          el caso, el pago de Obligaciones Cubiertas en caso de que (i) le
-          requiramos que realice dicha sustitución o; (ii) el Arrendatario
-          observe unilateralmente que los Métodos de Pago son insuficientes para
+          el caso, el pago de Obligaciones Garantizadas en caso de que (i) le
+          requiramos que realice dicha sustitución o; (ii) el Inquilino observe
+          unilateralmente que los Métodos de Pago son insuficientes para
           realizar dichos pagos;
         </li>
         <li>
@@ -501,9 +527,14 @@ const TermsAndConditions = () => {
         <li>
           Pagar sanciones, multas y/o intereses cuando sea necesario, siempre
           cumpliendo las limitaciones establecidas por la ley aplicable y la
-          jurisprudencia; y
+          jurisprudencia;
         </li>
-        <li>Responder a los mensajes y/o correos electrónicos de Rimbo.</li>
+        <li>Responder a los mensajes y/o correos electrónicos de Rimbo; y</li>
+        <li>
+          En el caso de que haya varios Inquilinos en un mismo Inmueble, y
+          siempre que estos hayan aceptado estas Condiciones Generales, todos
+          ellos serán responsables solidarios de las Obligaciones Garantizadas.
+        </li>
       </ol>
       <h2>12.PRECIO Y PAGO</h2>
       <p>
@@ -512,19 +543,19 @@ const TermsAndConditions = () => {
       </p>
       <h2>13. PROCESO DE CHECK-OUT</h2>
       <p>
-        Una vez que el Contrato de Arrendamiento haya terminado y el
-        Arrendatario haya dejado el Inmueble, seguimos teniendo el derecho de
-        cobrarle cualquier Cobro Permitido hasta el final del Plazo de
-        Autorización de Cargo.
+        Una vez que el Contrato de Arrendamiento haya terminado y el Inquilino
+        haya dejado el Inmueble, seguimos teniendo el derecho a cobrarle
+        cualquier Cobro Permitido hasta el final del Plazo de Autorización de
+        Cargo.
       </p>
       <p>
-        En caso de que existan Obligaciones Cubiertas impagadas durante el
+        En caso de que existan Obligaciones Garantizadas impagadas durante el
         Contrato de Arrendamiento que no hayan sido cobradas previamente, el
         Arrendador tendrá derecho a exigirnos que hagamos un Cobro Permitido
         final.
       </p>
       <p>
-        Eliminaremos y/o destruiremos sus datos personales tras la terminación
+        Eliminaremos y/o destruiremos los datos personales tras la terminación
         de estas Condiciones Generales y le informaremos de la cancelación de la
         Autorización de Cargo. Sin embargo, en algunos casos, podremos conservar
         sus datos personales durante el tiempo necesario para ejercer o defender
@@ -541,7 +572,8 @@ const TermsAndConditions = () => {
         por un período que finalizará sesenta (60) días después de la
         terminación del periodo inicial del Contrato de Arrendamiento (i.e.
         excluyendo cualquier renovación) (el “<b>Plazo</b>”), período durante el
-        cual el Arrendatario asume el compromiso de no rescindir este Acuerdo.{" "}
+        cual el Arrendador y el Inquilino asumen el compromiso de no rescindir
+        este Acuerdo.
       </p>
       <h3>
         14.2 <span>Terminación</span>
@@ -572,16 +604,26 @@ const TermsAndConditions = () => {
               indicadas en la siguiente cláusula 15; o
             </li>
             <li>
-              Incumplimiento por parte del Arrendatario de cualquier obligación
+              Incumplimiento por parte del Inquilino de cualquier obligación
               contenida en estas Condiciones Generales.
+            </li>
+          </ol>
+        </li>
+        <li>
+          Unilateralmente por Rimbo sin necesidad de preaviso, siempre que
+          exista:
+          <ol className="list-lower-roman">
+            <li>
+              Incumplimiento por parte del Arrendador de cualquier obligación
+              contenida en estas Condiciones Generales; o
             </li>
           </ol>
         </li>
       </ol>
       <p>
         En caso de terminación del Acuerdo de conformidad con el párrafo c)
-        anterior y las disposiciones de la Cláusula 14.1 anterior, le cobraremos
-        al Arrendatario la Fianza en Metálico y la transferiremos al Arrendador.
+        anterior, Rimbo cobrará al Inquilino la Fianza en Metálico y la
+        transferiremos al Arrendador.
       </p>
       <p>
         Cualquier disposición de este Acuerdo que, con el fin de cumplir con los
@@ -591,10 +633,9 @@ const TermsAndConditions = () => {
       </p>
       <h2>15. MANIFESTACIONES Y GARANTÍAS</h2>
       <h3>
-        15.1{" "}
-        <span>Manifestaciones y garantías efectuadas por el Arrendatario:</span>
+        15.1 <span>Manifestaciones y garantías del Inquilino:</span>
       </h3>
-      <p>El Arrendatario declara que:</p>
+      <p>El Inquilino declara que:</p>
       <ol className="list-lower-alpha">
         <li>
           No ha sido declarado en concurso por un tribunal competente, no está
@@ -602,13 +643,13 @@ const TermsAndConditions = () => {
           ni legislación similar que afecte a los derechos de los acreedores en
           general ni se ha presentado una petición para ser declarado en
           concurso o reconocer que es insolvente, y la presentación de dicha
-          solicitud, por su parte o la de cualquier tercero, no es inminente ni
-          razonablemente previsible. El Arrendatario no es insolvente y puede
-          cumplir con el pago de sus deudas en debido tiempo;
+          solicitud, por su parte o por parte de cualquier tercero, no es
+          inminente ni razonablemente previsible. El Inquilino no es insolvente
+          y puede cumplir con el pago de sus deudas en debido tiempo;
         </li>
         <li>
-          Toda la información que el Arrendatario ha proporcionado al Arrendador
-          y/o a Rimbo es verdadera, precisa y válida;
+          Toda la información que ha proporcionado al Arrendador y/o a Rimbo es
+          verdadera, precisa y válida;
         </li>
         <li>
           No ha sido declarado culpable de un delito penal ni ha sido nombrado
@@ -622,26 +663,46 @@ const TermsAndConditions = () => {
       <p>El Arrendador declara que:</p>
       <ol className="list-lower-alpha">
         <li>
+          No ha sido declarado en concurso por un tribunal competente, no está
+          sujeta a legislación que regule la insolvencia, bancarrota, moratoria
+          ni legislación similar que afecte a los derechos de los acreedores en
+          general ni se ha presentado una petición para ser declarado en
+          concurso o reconocer que es insolvente, y la presentación de dicha
+          solicitud por su parte o por parte de cualquier tercero no es
+          inminente ni razonablemente previsible. No es insolvente y puede
+          cumplir con el pago de sus deudas en debido tiempo;
+        </li>
+        <li>
+          Toda la información que ha proporcionado a Rimbo es verdadera, precisa
+          y válida;
+        </li>
+        <li>
+          No ha sido condenado por un delito ni ha sido nombrada sujeto de un
+          proceso penal pendiente (excluyendo las infracciones de tráfico y
+          otros delitos menores);
+        </li>
+        <li>
           Es el propietario o usufructuario del Inmueble, o bien es titular de
-          un derecho contractual que le autoriza a explotarlo económicamente
-          incluyendo a través de su arrendamiento a terceros;
+          un derecho contractual que le autoriza a explotarlo económicamente, o
+          a gestionar su explotación económica, incluso a través de su
+          arrendamiento a terceros, estando autorizado en este último caso a
+          suscribir las presentes Condiciones Generales;
         </li>
         <li>
           Cumple todos los requisitos administrativos y legales para la
           explotación del Inmueble; y
         </li>
         <li>
-          Los Contratos de Arrendamiento no están sujetos a la Ley 29/1994, de
-          29 de noviembre, de Arrendamientos Urbanos, sino a la voluntad del
-          Arrendador y del Arrendatario y, de forma supletoria, al Código Civil
-          español.
+          Los Contratos de Arrendamiento no son arrendamientos de vivienda y,
+          por tanto, no están sujetos al Título II de la Ley 29/1994, de 29 de
+          noviembre, de Arrendamientos Urbanos.{" "}
         </li>
       </ol>
       <h2>16. ACTIVIDADES PROHIBIDAS</h2>
       <p>
-        El Arrendatario no puede acceder a la Plataforma ni utilizarla para
-        ningún otro propósito que no sea aquel para el que Rimbo la pone a su
-        disposición. Si el Arrendatario participa en alguna de las actividades
+        El Inquilino no puede acceder a la Plataforma ni utilizarla para ningún
+        otro propósito que no sea aquel para el que Rimbo la pone a su
+        disposición. Si el Inquilino participa en alguna de las actividades
         prohibidas descritas a continuación, no se le permitirá crear una
         cuenta, o su cuenta será cancelada de conformidad con la cláusula de
         terminación por parte de Rimbo a su entera y absoluta discreción.
@@ -728,8 +789,8 @@ const TermsAndConditions = () => {
         incluido en aquella, así como del código de programación, diseño o
         materiales asociados a los Servicios. Esta protección se extiende a
         estas Condiciones Generales, que no pueden ser compartidos por el
-        Arrendatario o el Arrendador con ningún tercero sin el consentimiento
-        expreso de Rimbo.{" "}
+        Inquilino o el Arrendador con ningún tercero sin el consentimiento
+        expreso de Rimbo.
       </p>
       <p>
         Nuestros artículos, contenidos, imágenes o logotipos son propiedad
@@ -765,10 +826,10 @@ const TermsAndConditions = () => {
         Los datos personales proporcionados durante la relación contractual
         establecida por estas Condiciones Generales serán tratados por Rimbo
         como responsable de datos para permitir el cumplimiento y mantenimiento
-        de dichos Términos, incluyendo la realización de pagos y cobros, y para
+        de dichos términos, incluyendo la realización de pagos y cobros, y para
         cumplir con las obligaciones legales que puedan derivarse de dicha
         relación. La base legal para el tratamiento es el cumplimiento de la
-        relación contractual, que resulta de la aceptación de tales Términos, y
+        relación contractual, que resulta de la aceptación de tales términos, y
         el cumplimiento de las obligaciones legales.
       </p>
       <p>
@@ -787,26 +848,25 @@ const TermsAndConditions = () => {
         información, sin distinción, por las siguientes personas: (a) empleados
         y/o colaboradores autorizados por Rimbo, con sujeción en todo caso a las
         regulaciones de protección de datos aplicables; (b) siempre que
-        sospechemos que el Arrendatario ha incumplido estas Condiciones
-        Generales o cualquier normativa aplicable, o con el fin de prevenir,
-        detectar o anticipar fraudes y posibles infracciones de cualquier
-        normativa aplicable, Rimbo divulgará sus datos a las diversas
-        autoridades gubernamentales competentes, organismos encargados de hacer
-        cumplir la ley, organismos de investigación penal pertinentes; (c) en
-        caso de que exista una citación u orden judicial, o una solicitud
-        oficial similar, Rimbo divulgará sus datos a aquellas entidades y/o
-        autoridades cuya citación, solicitud u orden debamos cumplir; (d)
-        terceros proveedores de servicios que traten información como encargados
-        del tratamiento de datos, con los que hayamos suscrito el acuerdo de
-        tratamiento de datos correspondiente según lo requiera la normativa de
-        protección de datos.
+        sospechemos que el Inquilino ha incumplido estas Condiciones Generales o
+        cualquier normativa aplicable, o con el fin de prevenir, detectar o
+        anticipar fraudes y posibles infracciones de cualquier normativa
+        aplicable, Rimbo divulgará sus datos a las diversas autoridades
+        gubernamentales competentes, organismos encargados de hacer cumplir la
+        ley, organismos de investigación penal pertinentes; (c) en caso de que
+        exista una citación u orden judicial, o una solicitud oficial similar,
+        Rimbo divulgará sus datos a aquellas entidades y/o autoridades cuya
+        citación, solicitud u orden debamos cumplir; (d) terceros proveedores de
+        servicios que traten información como encargados del tratamiento de
+        datos, con los que hayamos suscrito el acuerdo de tratamiento de datos
+        correspondiente según lo requiera la normativa de protección de datos.
       </p>
       <p>
-        El Arrendatario puede ejercer sus derechos de acceso, rectificación,
+        El Inquilino puede ejercer sus derechos de acceso, rectificación,
         supresión, limitación del tratamiento, portabilidad de datos y objeción
         enviando un correo electrónico a info@rimbo.rent o escribiendo a nuestra
         dirección postal incluida en estas Condiciones Generales. Si el
-        Arrendatario no queda satisfecho con el ejercicio de sus derechos, puede
+        Inquilino no queda satisfecho con el ejercicio de sus derechos, puede
         presentar una reclamación ante la Agencia Española de Protección de
         Datos (www.aepd.es).
       </p>
@@ -817,19 +877,17 @@ const TermsAndConditions = () => {
       </p>
       <ol className="list-lower-alpha">
         <li>
-          Uso indebido o abuso por su parte de la información obtenida a través
-          de los Servicios y a través de la Plataforma.
+          Uso indebido o abuso por cualquiera de las partes de la información
+          obtenida a través de los Servicios y a través de la Plataforma.
         </li>
         <li>
-          Daños o perjuicios que se hayan producido como resultado de la forma
-          en que se utilice la información extraída de los Servicios.
-        </li>
-        <li>
-          Rimbo se compromete a resolver cualquier problema que pueda surgir a
-          través del Correo Electrónico de Asistencia, siempre que se deba única
-          y exclusivamente a un problema del sistema de Rimbo, colaborando en
-          todo lo necesario para que el Arrendatario pueda beneficiarse de una
-          solución rápida al incidente.
+          Daños o perjuicios que se produzcan como resultado de la forma en que
+          se utilice la información extraída de los Servicios. Los Servicios no
+          constituyen asesoramiento legal ni garantizan el cumplimiento presento
+          o futuro de cualquier normativa que pudiera ser de aplicación a la
+          actividad del Arrendador y/o al Inquilino, incluyendo, pero sin
+          limitarse a la normativa referente a la protección de datos
+          personales.
         </li>
         <li>
           Errores o daños producidos por negligencia o mala fe por su parte en
@@ -837,9 +895,9 @@ const TermsAndConditions = () => {
         </li>
         <li>
           Una dirección de correo electrónico inoperativa o problemática
-          proporcionada por el Arrendatario para el envío de documentación,
-          tanto propia como del destinatario, así como las consecuencias que
-          puedan surgir como resultado de lo anterior.
+          proporcionada por el Inquilino para el envío de documentación, tanto
+          propia como del destinatario, así como las consecuencias que puedan
+          surgir como resultado de lo anterior.
         </li>
         <li>
           Errores o incidencias que puedan producirse en comunicaciones,
@@ -850,15 +908,15 @@ const TermsAndConditions = () => {
           cualquier daño que esto pueda causar.
         </li>
         <li>
-          Cualquier tipo de daño que el Arrendatario o terceros puedan causar en
-          la Plataforma.
+          Cualquier tipo de daño que el Inquilino o terceros puedan causar en la
+          Plataforma.
         </li>
         <li>
           Nos reservamos el derecho de suspender el acceso sin previo aviso de
           manera discrecional, ya sea definitiva o temporalmente, hasta que se
           confirme la responsabilidad efectiva por cualquier daño que pueda
           haber ocurrido cuando se detecte cualquier situación en la que el
-          Arrendatario no haya actuado correctamente.
+          Inquilino no haya actuado correctamente.
         </li>
         <li>
           En ningún caso seremos responsables del tratamiento de datos que no
@@ -882,8 +940,11 @@ const TermsAndConditions = () => {
         </p>
         <p>
           Las actualizaciones y/o modificaciones se le anunciarán debidamente y
-          se le notificarán con 90 días de antelación, garantizando así los
-          principios de publicidad y transparencia.
+          se le notificarán con quince (15) días de antelación, garantizando así
+          los principios de publicidad y transparencia, así como los derechos
+          como consumidor/usuario. Si las partes continúan utilizando nuestros
+          Servicios después de dicho período de notificación, se considerará que
+          aceptan los nuevos términos.
         </p>
       </ol>
       <h2>21. NULIDAD DE CLÁUSULAS</h2>
@@ -895,29 +956,36 @@ const TermsAndConditions = () => {
         inaplicable.
       </p>
       <p>
-        Podemos optar por no ejercer ninguno de los derechos y facultades
+        Rimbo podrá optar por no ejercer ninguno de los derechos y facultades
         otorgados en este documento, sin embargo, esto no implica ninguna
-        renuncia a dichos derechos, a menos que lo reconozcamos expresamente.
+        renuncia a dichos derechos, a menos que Rimbo lo reconozca expresamente.
       </p>
       <h2>22. ASISTENCIA TÉCNICA</h2>
       <p>
-        Si el Arrendatario tiene alguna duda o problema técnico al iniciar
-        sesión en la Plataforma (por ejemplo, si ha olvidado su contraseña),
-        siga las instrucciones en el campo de inicio de sesión de la Plataforma
-        para recuperar su nombre de usuario y/o contraseña.
+        Si el Inquilino tiene alguna duda o problema técnico al iniciar sesión
+        en la Plataforma (por ejemplo, si ha olvidado su contraseña), debe
+        seguir las instrucciones en el campo de inicio de sesión de la
+        Plataforma para recuperar su nombre de usuario y/o contraseña.
       </p>
       <p>
-        Si el Arrendatario, no obstante, tiene un problema técnico para
-        recuperar su nombre de usuario y/o contraseña o si tiene alguna duda o
-        inquietud general, tiene la posibilidad de ponerse en contacto con
-        nosotros a través de nuestro Correo Electrónico de Asistencia para que
-        podamos intentar resolver sus consultas o problemas técnicos.
+        Si el Inquilino, no obstante, tiene un problema técnico para recuperar
+        su nombre de usuario y/o contraseña o si tiene alguna duda o inquietud
+        general, tiene la posibilidad de ponerse en contacto con Rimbo a través
+        del Correo Electrónico de Asistencia para que podamos intentar resolver
+        sus consultas o problemas técnicos.
+      </p>
+      <p>
+        Rimbo se compromete a intentar resolver cualquier problema que pueda
+        surgir a través del Correo Electrónico de Asistencia, siempre que se
+        deba única y exclusivamente a un problema del sistema de Rimbo,
+        colaborando en todo lo necesario para que el interesado pueda
+        beneficiarse de una solución rápida al incidente.
       </p>
       <h2>23. IDIOMA APLICABLE</h2>
       <p>
         Si existe alguna discrepancia entre el texto de estas Condiciones
         Generales y cualquiera de sus traducciones, la versión en español
-        siempre prevalecerá, ya que Rimbo se encuentra en España.
+        siempre prevalecerá, ya que Rimbo tiene su domicilio social en España.
       </p>
       <h2>24. LEY APLICABLE Y JURISDICCIÓN</h2>
       <p>
@@ -933,9 +1001,9 @@ const TermsAndConditions = () => {
         normativa legal aplicable en el ámbito de la jurisdicción competente.
       </p>
       <p>
-        Si el Arrendatario es una persona física, el tribunal competente será
-        aquel en el que tenga su residencia habitual, mientras que, si es una
-        persona jurídica, los tribunales competentes serán los de la ciudad de
+        Si el Inquilino es una persona física, el tribunal competente será aquel
+        en el que tenga su residencia habitual, mientras que, si es una persona
+        jurídica, los tribunales competentes serán los de la ciudad de
         Barcelona.
       </p>
       <p>
@@ -943,11 +1011,11 @@ const TermsAndConditions = () => {
         Parlamento Europeo y del Consejo, de 21 de mayo de 2013, aplicable a
         partir del 9 de enero de 2016, sobre la resolución de litigios en línea
         en materia de consumo y por el que se modifica el Reglamento (CE) nº
-        2006/2004 y la Directiva 2009/22/CE, en caso de que el Arrendatario sea
-        una persona física, puede elegir este mecanismo alternativo para
-        plantear cualquier disputa o reclamación si cree que ha sufrido algún
-        daño o perjuicio como resultado de haber utilizado nuestra Plataforma o
-        al utilizar nuestros Servicios, a través del siguiente enlace:{" "}
+        2006/2004 y la Directiva 2009/22/CE, en caso de que el Inquilino sea una
+        persona física, puede elegir este mecanismo alternativo para plantear
+        cualquier disputa o reclamación si cree que ha sufrido algún daño o
+        perjuicio como resultado de haber utilizado nuestra Plataforma o al
+        utilizar nuestros Servicios, a través del siguiente enlace:{" "}
         <a href="http://ec.europa.eu/consumers/odr/">
           http://ec.europa.eu/consumers/odr/
         </a>
@@ -960,7 +1028,7 @@ const TermsAndConditions = () => {
         para todo el mundo y funciona de la siguiente manera:
       </p>
       <p>
-        1. El Arrendatario debe rellenar un formulario de reclamación en línea y
+        1. El Inquilino debe rellenar un formulario de reclamación en línea y
         enviarlo a través de la propia plataforma; 2. La reclamación llegará a
         la otra parte afectada, que propondrá una entidad de resolución
         alternativa para la controversia, de acuerdo con el caso específico; 3.

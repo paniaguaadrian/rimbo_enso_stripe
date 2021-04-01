@@ -114,8 +114,8 @@ app.post("/stripe/submit-email/en", (req, res) => {
         cid: "rimbologo",
       },
       {
-        filename: "Enso_Tenant General Rules & Guidelines_Eng.pdf",
-        path: "./views/images/Enso_Tenant General Rules & Guidelines_Eng.pdf",
+        filename: "Tenant General Rules & Guidelines_ENSO_EN.pdf",
+        path: "./views/images/Tenant General Rules & Guidelines_ENSO_EN.pdf",
       },
     ],
     template: "index",
@@ -257,8 +257,8 @@ app.post("/stripe/submit-email/es", (req, res) => {
         cid: "rimbologo",
       },
       {
-        filename: "Enso_Inquilino_Guia_Reglas Generales_Es.pdf",
-        path: "./views/images/Enso_Inquilino_Guia_Reglas Generales_Es.pdf",
+        filename: "Tenant Guía & Reglas generales_ENSO_ES.pdf",
+        path: "./views/images/Tenant Guía & Reglas generales_ENSO_ES.pdf",
       },
     ],
     template: "indexes",
